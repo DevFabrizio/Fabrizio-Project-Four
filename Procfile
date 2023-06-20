@@ -1,1 +1,1 @@
-web : gunicorn matinicus.wsgi
+web: gunicorn matinicus.wsgi
