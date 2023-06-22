@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from .models import Booking, Customer
+from .models import Booking
 
 # Create your views here.
 
