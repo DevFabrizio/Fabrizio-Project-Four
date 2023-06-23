@@ -6,8 +6,10 @@ from .models import Booking
 
 
 class Home(generic.ListView):
-    model = Booking
-    template_name = 'base.html'
+    
+    # template_name = 'base.html'
+    def get(self, request):
+        return render(request, 'menu.html')
 
 
 class Menu(View):
@@ -20,6 +22,9 @@ class Signup(View):
         return render(request, 'signup.html')
 
 
-class Booking(View):
+class BookingView(View):
     def get(self, request):
-        return render(request, 'booking.html')
+        bookings = Booking.objects.all()
+        context = {'bookings': bookings}
+        return render(request, 'booking.html', context)
+    
