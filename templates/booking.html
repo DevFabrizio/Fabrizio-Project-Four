@@ -4,15 +4,13 @@
 <h1>Booking Details</h1>
 <div class="container">
     <div class="row">
-        {% for booking in bookings %}
         <div class="col-4">
-            <p>Reservation Name: {{ booking.reservation_name }}</p>
-            <p>Time of Reservation: {{ booking.time_of_reservation }}</p>
-            <p>Number of Guests: {{ booking.num_of_guests }}</p>
-            <p>Kids Under 10: {{ booking.kids_under_10 }}</p>
-            <p>Allergies: {{ booking.allergies }}</p>
+           <form action="" method="post">
+            {% csrf_token %}
+                {{ form }}         
+                <input type="submit" value="Send Reservation">
+           </form>
         </div>
-        {% endfor %}
     </div>
 </div>
 

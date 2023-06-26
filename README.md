@@ -7,4 +7,4 @@ tech used:
 - figma
 - lucid chart
 - postgresql
--
+- django-datetime-picker
