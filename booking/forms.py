@@ -8,5 +8,6 @@ class BookingForm(ModelForm):
         model = Booking
         fields = '__all__'
         widgets = {
-            'time_of_reservation': DateTimeInput(attrs={'type': 'datetime-local'})
+            'time_of_reservation': DateTimeInput(attrs={
+                'type': 'datetime-local'})
         }

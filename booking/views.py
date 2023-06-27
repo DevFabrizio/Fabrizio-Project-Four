@@ -7,7 +7,6 @@ from .forms import BookingForm
 
 
 class Home(generic.ListView):
-    
     # template_name = 'base.html'
     def get(self, request):
         return render(request, 'menu.html')
@@ -37,6 +36,8 @@ class BookingView(View):
             form = BookingForm(request.POST)
             if form.is_valid():
                 form.save()
-
-        context = {'form': form}
+                success_message = """
+                    Your reservation has been submitted correctly
+                    """
+        context = {'form': form, 'success_message': success_message}
         return render(request, 'booking.html', context)
