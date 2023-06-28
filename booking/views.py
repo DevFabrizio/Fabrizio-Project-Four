@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from .models import Booking
-from .forms import BookingForm
+from .models import Booking, UserReservation
+from .forms import BookingForm, UserReservationForm
 
 # Create your views here.
 
@@ -23,14 +23,30 @@ class Signup(View):
 
 
 class UserReservations(View):
+    
     def get(self, request):
-        return render(request, 'user_reservations.html')
+        form = BookingForm()
+        context = {'form': form}
+        return render(request, 'user_reservations.html', context)
+
+    def post(self, request):
+        form = UserReservationForm()
+
+        if request.method == 'POST':
+            form = UserReservationForm(request.POST)
+            if form.is_valid():
+                form.save()
+                success_message = """
+                    Your reservation has been submitted correctly
+                    """
+        context = {'form': form, 'success_message': success_message}
+        return render(request, 'user_reservations.html', context)
 
 
 class BookingView(View):
 
     def get(self, request):
-        form = BookingForm()
+        form = UserReservationForm()
         context = {'form': form}
         return render(request, 'booking.html', context)
 
