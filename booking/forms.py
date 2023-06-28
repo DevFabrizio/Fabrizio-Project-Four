@@ -15,7 +15,7 @@ class BookingForm(ModelForm):
 
 class UserReservationForm(ModelForm):
     class Meta:
-        model = Booking
+        model = UserReservation
         fields = '__all__'
         widgets = {
             'time_of_reservation': DateTimeInput(attrs={

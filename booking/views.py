@@ -23,9 +23,9 @@ class Signup(View):
 
 
 class UserReservations(View):
-    
+
     def get(self, request):
-        form = BookingForm()
+        form = UserReservationForm()
         context = {'form': form}
         return render(request, 'user_reservations.html', context)
 
@@ -39,7 +39,12 @@ class UserReservations(View):
                 success_message = """
                     Your reservation has been submitted correctly
                     """
-        context = {'form': form, 'success_message': success_message}
+                reservation_name = form.save().reservation_name
+        context = {
+            'form': form,
+            'success_message': success_message,
+            'reservation_name': reservation_name
+            }
         return render(request, 'user_reservations.html', context)
 
 
