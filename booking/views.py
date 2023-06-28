@@ -22,6 +22,11 @@ class Signup(View):
         return render(request, 'signup.html')
 
 
+class UserReservations(View):
+    def get(self, request):
+        return render(request, 'user_reservations.html')
+
+
 class BookingView(View):
 
     def get(self, request):
