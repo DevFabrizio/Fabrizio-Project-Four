@@ -38,7 +38,6 @@ class UserReservations(View):
         return render(request, 'user_reservations.html', context)
 
     def post(self, request):
-        # form = UserReservationForm()
         all_reservations = UserReservation.objects.filter(user=request.user)
         success_message = """
             Your reservation has been submitted correctly
@@ -48,6 +47,10 @@ class UserReservations(View):
             form = UserReservationForm(request.POST)
             if form.is_valid():
                 reservation = form.save(commit=False)
+                """
+                the "reservation.user var self assigns the user
+                to the form based on the logged-in user
+                """
                 reservation.user = request.user
                 reservation.save()
                 reservation_name = form.cleaned_data['reservation_name']
@@ -78,5 +81,6 @@ class BookingView(View):
                 success_message = """
                     Your reservation has been submitted correctly
                     """
+                form = BookingForm()
         context = {'form': form, 'success_message': success_message}
         return render(request, 'booking.html', context)

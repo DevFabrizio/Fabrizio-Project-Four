@@ -14,9 +14,12 @@ class BookingForm(ModelForm):
 
 
 class UserReservationForm(ModelForm):
-    # def __init__(self, *args, **kwargs):
-    #     super().__init__(*args, **kwargs)
-    #     self.fields['user'].widget.attrs['disabled'] = True
+    """
+    meta class includes the widget to easily allow the users to pick a
+    date and time, the exclude clause cuts off the user from the form as
+    to allow the form to automatically generate the user based on who is 
+    logged in at the moment.
+    """
 
     class Meta:
         model = UserReservation
