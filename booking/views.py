@@ -7,7 +7,6 @@ from .forms import BookingForm, UserReservationForm
 
 
 class Home(generic.ListView):
-    # template_name = 'base.html'
     def get(self, request):
         return render(request, 'menu.html')
 
@@ -20,6 +19,14 @@ class Menu(View):
 class Signup(View):
     def get(self, request):
         return render(request, 'signup.html')
+
+
+class UserReservationsPage(View):
+    
+    def get(self, request):
+        # reservations = UserReservation.objects.filter(user=request.user)
+        # reservation_name = form.cleaned_data['reservation_name']
+        return render(request, 'user_reservations.html')
 
 
 class UserReservations(View):
@@ -35,10 +42,10 @@ class UserReservations(View):
             'allergies': form['allergies'],
             'kids_under_10': form['kids_under_10'],
             }
-        return render(request, 'user_reservations.html', context)
+        return render(request, 'user_booking.html', context)
 
     def post(self, request):
-        all_reservations = UserReservation.objects.filter(user=request.user)
+        # all_reservations = UserReservation.objects.filter(user=request.user)
         success_message = """
             Your reservation has been submitted correctly
             """
@@ -53,7 +60,6 @@ class UserReservations(View):
                 """
                 reservation.user = request.user
                 reservation.save()
-                reservation_name = form.cleaned_data['reservation_name']
                 form = UserReservationForm()
         context = {
             'form': form,
@@ -61,7 +67,7 @@ class UserReservations(View):
             'reservation_name': reservation_name,
             'all_reservations': all_reservations
             }
-        return render(request, 'user_reservations.html', context)
+        return render(request, 'user_booking.html', context)
 
 
 class BookingView(View):
@@ -84,3 +90,5 @@ class BookingView(View):
                 form = BookingForm()
         context = {'form': form, 'success_message': success_message}
         return render(request, 'booking.html', context)
+
+

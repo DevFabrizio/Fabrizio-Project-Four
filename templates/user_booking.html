@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Welcome to the user reservations page</h1>
+<h2>Make a new reservation</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+           <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Send Reservation">
+           </form>
+        </div>
+        <div class="col-4">
+            {% for reservation in all_reservations %}
+                <p>{{reservation.reservation_name}}</p>
+            {% endfor %}
+        </div>
+    </div>
+    {% if success_message %}
+    <div class="row">
+        <div id="reservation-success-msg" class="col-4">{{ success_message }}</div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

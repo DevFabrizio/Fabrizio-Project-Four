@@ -1,37 +1,4 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Welcome to the user reservations page</h1>
-<h2>Make a new reservation</h2>
-<div class="container">
-    <div class="row">
-        <div class="col-4">
-           <form action="" method="post">
-            {% csrf_token %}
-               
-                <!-- <label for="reservation_name">Reservation Name:</label>     
-                {{ reservation_name }}                  
-                <label for="num_of_guests">Number of Guests:</label>     
-                {{ num_of_guests }}                  
-                <label for="kids_under_10">Children under 10</label>     
-                {{ kids_under_10 }}                  
-                <label for="time_of_reservation">Reservation Time</label>     
-                {{ time_of_reservation }}                  
-                <label for="allergies">Allergies</label>     
-                {{ allergies }}                   -->
-                {{ form.as_p }}
-                <input type="submit" value="Send Reservation">
-           </form>
-        </div>
-        <div class="col-4">
-            {% for reservation in all_reservations %}
-                <p>{{reservation.reservation_name}}</p>
-            {% endfor %}
-        </div>
-    </div>
-    {% if success_message %}
-    <div class="row">
-        <div id="reservation-success-msg" class="col-4">{{ success_message }}</div>
-    </div>
-    {% endif %}
-</div>
+<h1>This is where you can see all the users' reservations</h1>
 {% endblock %}
