@@ -24,9 +24,13 @@ class Signup(View):
 class UserReservationsPage(View):
     
     def get(self, request):
-        # reservations = UserReservation.objects.filter(user=request.user)
-        # reservation_name = form.cleaned_data['reservation_name']
-        return render(request, 'user_reservations.html')
+        reservations = UserReservation.objects.filter(user=request.user)
+        # reservation_time = UserReservation.objects.filter(reservation_time=time_of_reservation)
+        context = {
+            'reservations': reservations,
+            # 'reservation_time': reservation_time
+        }
+        return render(request, 'user_reservations.html', context)
 
 
 class UserReservations(View):
