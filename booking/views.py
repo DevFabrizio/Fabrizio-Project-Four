@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
 from .models import Booking, UserReservation
 from .forms import BookingForm, UserReservationForm
@@ -25,12 +25,21 @@ class UserReservationsPage(View):
     
     def get(self, request):
         reservations = UserReservation.objects.filter(user=request.user)
-        # reservation_time = UserReservation.objects.filter(reservation_time=time_of_reservation)
         context = {
             'reservations': reservations,
-            # 'reservation_time': reservation_time
         }
         return render(request, 'user_reservations.html', context)
+    
+
+class DeleteReservation(View):
+
+    def post(self, request, reservation_id):
+        if request.method == 'POST':
+            reservation = UserReservation.objects.get(
+                id=reservation_id, user=request.user)
+
+            reservation.delete()
+        return redirect('user_reservations')
 
 
 class UserReservations(View):
@@ -49,7 +58,6 @@ class UserReservations(View):
         return render(request, 'user_booking.html', context)
 
     def post(self, request):
-        # all_reservations = UserReservation.objects.filter(user=request.user)
         success_message = """
             Your reservation has been submitted correctly
             """

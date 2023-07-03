@@ -4,22 +4,31 @@
 <div class="container">
    <div class="row">
       {% for reservation in reservations %}
-      <div class="card col-lg-3 col-md-6 col-sm-12">
-         <div class="card-body">
-           <h5 class="card-title">{{ reservation }}</h5>
-           <h6 class="card-subtitle mb-2 text-body-secondary">Time of the reservation</h6>
-           <p class="card-text">{{ reservation.time_of_reservation }}</p>
-           <h6 class="card-subtitle mb-2 text-body-secondary">Number of guests</h6>
-           <p class="card-text">{{ reservation.num_of_guests }}</p>
-           <h6 class="card-subtitle mb-2 text-body-secondary">Allergies</h6>
-           <p class="card-text">{{ reservation.allergies }}</p>
-           <h6 class="card-subtitle mb-2 text-body-secondary">Children under 10 years old</h6>
-           <p class="card-text">{{ reservation.kids_under_10 }}</p>
-           <a href="#" class="card-link">Card link</a>
-           <a href="#" class="card-link">Another link</a>
+      <form action="{% url 'delete_reservation' reservation.id %}" method="POST" class="col-lg-3 col-md-6 col-sm-12">
+         {% csrf_token %}
+         <div class="card ">
+            <div class="card-body">
+               <h5 class="card-title">{{ reservation }}</h5>
+               <h6 class="card-subtitle mb-2 text-body-secondary">Time of the reservation</h6>
+               <p class="card-text">{{ reservation.time_of_reservation }}</p>
+               <h6 class="card-subtitle mb-2 text-body-secondary">Number of guests</h6>
+               <p class="card-text">{{ reservation.num_of_guests }}</p>
+               <h6 class="card-subtitle mb-2 text-body-secondary">Allergies</h6>
+               <p class="card-text">{{ reservation.allergies }}</p>
+               <h6 class="card-subtitle mb-2 text-body-secondary">Children under 10 years old</h6>
+               <p class="card-text">
+                  {% if reservation.kids_under_10 %}
+                  Yes
+                  {% else %}
+                  No   
+                  {% endif %}
+               </p>
+               <input type="submit" href="{% url 'user_reservations' %}" class="btn btn-danger" value="Delete">
+               <button type="button" class="btn btn-warning">Edit</button>
+            </div>
          </div>
-       </div>
-       {% endfor %}
+      </form>
+      {% endfor %}
    </div>
 </div>
 {% endblock %}
