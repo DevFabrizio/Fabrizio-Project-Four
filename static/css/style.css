@@ -1,8 +1,16 @@
+
+
 /* header section */
 
 h1 {
     color: rgb(93, 185, 85);
     margin-top: 4rem;
+}
+
+/* main section */
+
+main {
+    margin-bottom: 5rem;
 }
 
 /* footer section */
