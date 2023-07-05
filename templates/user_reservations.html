@@ -24,7 +24,7 @@
                   {% endif %}
                </p>
                <input type="submit" href="{% url 'user_reservations' %}" class="btn btn-danger" value="Delete">
-               <a class="btn btn-warning" href="{% url 'edit_reservation' %}">Edit</a>
+               <a class="btn btn-warning" href="{% url 'edit_reservation' reservation.id %}">Edit</a>
             </div>
          </div>
       </form>

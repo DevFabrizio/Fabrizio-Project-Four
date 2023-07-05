@@ -22,8 +22,35 @@ class Signup(View):
 
 
 class EditReservation(View):
-    def get(self, request):
-        return render(request, 'edit_reservation.html')
+    def get(self, request, reservation_id):
+        reservation = get_object_or_404(
+            UserReservation,
+            id=reservation_id,
+            user=request.user)
+        form = UserReservationForm(instance=reservation)
+        context = {
+            'form': form,
+            'reservation': reservation,
+        }
+        return render(request, 'edit_reservation.html', context)
+
+    def post(self, request, reservation_id):
+
+        reservation = get_object_or_404(
+            UserReservation,
+            id=reservation_id,
+            user=request.user)
+        
+        form = UserReservationForm(request.POST, instance=reservation)
+        if form.is_valid():
+            form.save()
+            return redirect('user_reservations')
+        else:
+            context = {
+                'form': form,
+                'reservation': reservation,
+            }
+            return render(request, 'edit_reservation.html', context)
 
 
 class UserReservationsPage(View):

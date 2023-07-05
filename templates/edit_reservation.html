@@ -1,4 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>this is the edit reservation page</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <a href="{% url 'user_reservations' %}">
+                <button class="btn btn-success">Confirm Edit</button>
+            </a>
+        </form>
+
 {% endblock %}
