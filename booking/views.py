@@ -11,11 +11,6 @@ class Home(generic.ListView):
         return render(request, 'menu.html')
 
 
-class Logout(View):
-    def get(self, request):
-        return render(request, 'logout.html')
-
-
 class Menu(View):
     def get(self, request):
         return render(request, 'menu.html')
@@ -24,6 +19,11 @@ class Menu(View):
 class Signup(View):
     def get(self, request):
         return render(request, 'signup.html')
+
+
+class Maps(View):
+    def get(self, request):
+        return render(request, 'maps.html')
 
 
 class EditReservation(View):
