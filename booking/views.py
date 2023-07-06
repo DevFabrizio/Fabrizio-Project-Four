@@ -109,7 +109,6 @@ class UserReservations(View):
             'form': form,
             'success_message': success_message,
             'reservation_name': reservation_name,
-            'all_reservations': all_reservations
             }
         return render(request, 'user_booking.html', context)
 
