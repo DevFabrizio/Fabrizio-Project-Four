@@ -8,3 +8,4 @@ tech used:
 - lucid chart
 - postgresql
 - django-datetime-picker
+- Google Maps Embed API
