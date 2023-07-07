@@ -4,7 +4,7 @@
 <div class="container">
    <div class="row">
       {% for reservation in reservations %}
-         <div class="card col-lg-3 col-md-4 col-sm-1">
+         <div class="card col-lg-3 col-md-4 col-sm-1 gy-4 gx-1">
             <div class="card-body text-center">
                <h5 class="card-title">{{ reservation }}</h5>
                <h6 class="card-subtitle mb-2 text-body-secondary">Time of the reservation</h6>
@@ -22,7 +22,7 @@
                   {% endif %}
                </p>
                <!-- <input type="submit" href="{% url 'user_reservations' %}" class="btn btn-danger" value="Delete"> -->
-               <a href="{% url 'confirm_delete' %}" class="btn btn-danger">Delete</a>
+               <a href="{% url 'confirm_delete' reservation.id %}" class="btn btn-danger">Delete</a>
                <a class="btn btn-warning" href="{% url 'edit_reservation' reservation.id %}">Edit</a>
             </div>
          </div>

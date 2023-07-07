@@ -27,8 +27,26 @@ class Maps(View):
 
 
 class ConfirmDelete(View):
-    def get(self, request):
-        return render(request, 'confirm_delete.html')
+
+    def get(self, request, reservation_id):
+        reservation = get_object_or_404(
+            UserReservation,
+            id=reservation_id,
+            user=request.user)
+        form = UserReservationForm(instance=reservation)
+        context = {
+            'form': form,
+            'reservation': reservation,
+        }
+        return render(request, 'confirm_delete.html', context)
+
+    def post(self, request, reservation_id):
+        if request.method == 'POST':
+            reservation = UserReservation.objects.get(
+                id=reservation_id, user=request.user)
+
+            reservation.delete()
+        return redirect('user_reservations')
 
 
 class EditReservation(View):
@@ -71,7 +89,7 @@ class UserReservationsPage(View):
             'reservations': reservations,
         }
         return render(request, 'user_reservations.html', context)
-    
+
 
 class DeleteReservation(View):
 
@@ -143,5 +161,3 @@ class BookingView(View):
                 form = BookingForm()
         context = {'form': form, 'success_message': success_message}
         return render(request, 'booking.html', context)
-
-
