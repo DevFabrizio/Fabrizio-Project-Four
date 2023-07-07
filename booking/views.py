@@ -26,6 +26,11 @@ class Maps(View):
         return render(request, 'maps.html')
 
 
+class ConfirmDelete(View):
+    def get(self, request):
+        return render(request, 'confirm_delete.html')
+
+
 class EditReservation(View):
     def get(self, request, reservation_id):
         reservation = get_object_or_404(
