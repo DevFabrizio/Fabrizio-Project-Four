@@ -68,7 +68,7 @@ class EditReservation(View):
             UserReservation,
             id=reservation_id,
             user=request.user)
-        
+
         form = UserReservationForm(request.POST, instance=reservation)
         if form.is_valid():
             form.save()
@@ -82,7 +82,7 @@ class EditReservation(View):
 
 
 class UserReservationsPage(View):
-    
+
     def get(self, request):
         reservations = UserReservation.objects.filter(user=request.user)
         context = {
@@ -145,7 +145,14 @@ class BookingView(View):
 
     def get(self, request):
         form = BookingForm()
-        context = {'form': form}
+        context = {
+            'form': form,
+            # 'reservation_name': form['reservation_name'],
+            # 'time_of_reservation': form['time_of_reservation'],
+            # 'num_of_guests': form['num_of_guests'],
+            # 'allergies': form['allergies'],
+            # 'kids_under_10': form['kids_under_10'],
+            }
         return render(request, 'booking.html', context)
 
     def post(self, request):
@@ -155,9 +162,9 @@ class BookingView(View):
             form = BookingForm(request.POST)
             if form.is_valid():
                 form.save()
+                form = BookingForm()
                 success_message = """
                     Your reservation has been submitted correctly
                     """
-                form = BookingForm()
         context = {'form': form, 'success_message': success_message}
         return render(request, 'booking.html', context)
