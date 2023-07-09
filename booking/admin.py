@@ -10,7 +10,7 @@ class BookingAdmin(admin.ModelAdmin):
 
 @admin.register(UserReservation)
 class UserReservationAdmin(admin.ModelAdmin):
-    list_filter = ('reservation_name', 'time_of_reservation')
+    list_filter = ('user', 'time_of_reservation')
     list_display = ('reservation_name',
                     'time_of_reservation',
                     'num_of_guests',
