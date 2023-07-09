@@ -1,7 +1,28 @@
+/* menu.html */
+
+#hero-img {
+    margin-top: 5rem;
+    background-image: url("https://res.cloudinary.com/devfabrizio/image/upload/v1688909725/Project%20Matinicus/pexels-elevate-1267320_iim0dv.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+
+
+/* .img-bg {
+    max-width: 100%;
+    opacity: 0.5;
+    position: relative;
+} */
+
+
+
 /* header section */
 
 h1 {
     color: rgb(93, 185, 85);
+    margin-top: 6rem;
+    font-size: 7vw;
 }
 
 /* main section */

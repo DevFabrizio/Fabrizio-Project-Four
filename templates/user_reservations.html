@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1 class="mt-5 text-center">This is where you can see all the users' reservations</h1>
+<h1 class="text-center">These are your reservations</h1>
 <div class="container">
    <div class="row">
       {% for reservation in reservations %}
@@ -13,7 +13,7 @@
                <p class="card-text">{{ reservation.num_of_guests }}</p>
                <h6 class="card-subtitle mb-2 text-body-secondary">Allergies</h6>
                <p class="card-text">{{ reservation.allergies }}</p>
-               <h6 class="card-subtitle mb-2 text-body-secondary">Children under 10 years old</h6>
+               <h6 class="card-subtitle mb-2 text-body-secondary">Children under 10</h6>
                <p class="card-text">
                   {% if reservation.kids_under_10 %}
                   Yes
