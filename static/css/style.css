@@ -12,6 +12,11 @@ main {
     margin-bottom: 5rem;
 }
 
+/* user_booking.html */
+
+.card {
+    max-width: 75%;
+}
 
 /* footer section */
 

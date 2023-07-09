@@ -15,10 +15,3 @@ class UserReservationAdmin(admin.ModelAdmin):
                     'time_of_reservation',
                     'num_of_guests',
                     )
-
-
-
-
-
-
-
