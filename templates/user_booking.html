@@ -7,16 +7,16 @@
         <div class="card col-lg-3 col-md-4 col-sm-12 mx-auto">
            <form action="" method="post">
                 {% csrf_token %}
-                <p for="reservation_name">Reservation Name:</p>       
-                <p  id="reservation_name">{{ form.reservation_name }}</p>
-                <p for="time_of_reservation">Time of Reservation:</p>
+                <p class="card-subtitle mb-2 text-body-secondary" for="reservation_name">Reservation Name:</p>       
+                <p id="reservation_name">{{ form.reservation_name }}</p>
+                <p class="card-subtitle mb-2 text-body-secondary" for="time_of_reservation">Time of Reservation:</p>
                 <p id="time_of_reservation">{{ form.time_of_reservation }}</p>
-                <p for="num_of_guests">Number of guests:</p>
+                <p class="card-subtitle mb-2 text-body-secondary" for="num_of_guests">Number of guests:</p>
                 <p id="num_of_guests">{{ form.num_of_guests }}</p>
-                <p for="allergies">Allergies:</p>
+                <p class="card-subtitle mb-2 text-body-secondary" for="allergies">Allergies:</p>
                 <p id="allergies">{{ form.allergies }}</p>
-                <span for="kids_under_10">Children under 10:</span>
-                <span class="d-block" id="kids_under_10">{{ form.kids_under_10}}</span>
+                <span class="card-subtitle mb-2 text-body-secondary" for="kids_under_10">Children under 10:</span>
+                <span id="kids_under_10">{{ form.kids_under_10}}</span>
                 <input type="submit" class="btn btn-success mt-3 mb-1" value="Send Reservation">
            </form>
         </div>
