@@ -11,6 +11,10 @@
     width: 100%;
     opacity: 0.4;
 }
+#chef-img {
+    width: 100%;
+    opacity: 0.5;
+}
 
 #hero-header {
     position: absolute;
@@ -28,7 +32,7 @@
 
 #menu-header {
     position: absolute;
-    top: 4rem;
+    top: 38rem;
     right: 1rem;
     width: 80vw;
     line-height: 1.7rem;
@@ -37,6 +41,11 @@
 .menu-container {
     display: flex;
     flex-direction: column;
+}
+
+#chef-header {
+    position: absolute;
+    top: 109rem;
 }
 
 /* header section */

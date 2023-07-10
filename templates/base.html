@@ -14,7 +14,7 @@
         <div class="container-fluid">
           <a class="navbar-brand m-0" href="{% url 'home' %}">Matinicus</a>
           {% if user.is_authenticated %}
-          <span id="username" class="col-1 ms-2 me-5">{{ user }}</span>
+          <span id="username" class="col-1 ms-2 me-5 align-baseline">{{ user }}</span>
           {% else %}
           <a class="nav-link" href="{% url 'account_login' %}">Log-in</a>
           {% endif %}
