@@ -15,7 +15,7 @@ In order to obtain the result wanted for this product it was imperative that the
 
 ## Structure Plane 
 
-
+As a restaurant platform the development process for the structure was based on the possibility of letting the user decide to access all the content as a subscribed user of the website or as a simple visitor. The navigation through the various pages is guaranteed by the many links present. Most of these links are placed in the navigation bar at the top of the page as to always allow a quick method to move through the functionalities. In the pages dedicated to the users' reservations the link added to access the "delete" and "update" functionalities are only accessible on that specific page as it would have been a poor user experience in my opinion to place them anywhere else. The footer constitutes an evergreen in terms of social engagement for a restaurant website. Through the links in the footer section it is possible to access the major social media platforms in order to let the user stay up to date with the latest news from the restaurant without having to rely to the classic and somewhat invasive newsletter. 
 
 
 
