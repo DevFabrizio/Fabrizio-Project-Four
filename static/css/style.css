@@ -1,22 +1,25 @@
 /* menu.html */
 
-#hero-img {
-    margin-top: 5rem;
-    background-image: url("https://res.cloudinary.com/devfabrizio/image/upload/v1688909725/Project%20Matinicus/pexels-elevate-1267320_iim0dv.webp");
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-}
 
-
-/* .img-bg {
+.img-bg {
     max-width: 100%;
     opacity: 0.5;
     position: relative;
-} */
+}
 
+#hero-header {
+    position: absolute;
+    top: 5rem;
+    width: 9rem;
+}
 
-
+#hero-p {
+    position: absolute;
+    top: 7rem;
+    right: 2rem;
+    width: 8rem;
+    font-style: italic;
+}
 /* header section */
 
 h1 {
