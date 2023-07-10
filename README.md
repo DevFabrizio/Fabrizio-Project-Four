@@ -11,6 +11,11 @@ This project involves one of the most classic type of sofware/websites in today'
 
 ## Scope Plane
 
+In order to obtain the result wanted for this product it was imperative that the deleopment process followed an Agile approach. Mostly because an Agile methodology would have allowed me to be more flexible with my schedule and with the objectives and features I wanted to develop. What I wanted to do with this website is to add enough features so that the users would be able to have an account on the webiste which would in return allow them to browse through all the reservations that they had made in the past. Based on previous experience and a small research conducted within the circle of people close to me I decided that another feature to add was the possibility of booking a table even WITHOUT having a profile on the website. This is because it has been found during the research that the majority of people usually don't dine at the same restaurant, even within the span of a couple of months. Hence the decision on having an unrestricted access to the reservations system even for random users. Some other necessary features born of the research on multiple other hogh end restaurants are a reference to the position of the location through the use of a map in a dedicated area of the website and a main page with detailed information on some key aspects of the restaurant like the menu, the main goal of the enterprise and and the chef leading the kitchen. 
+
+## Structure Plane 
+
+
 
 
 
