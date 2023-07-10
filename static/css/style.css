@@ -86,12 +86,12 @@ main {
 
     #hero-header {
         top: 10rem;
-        left: 11rem;
+        left: 11vw;
     }
 
     #hero-p {
-        top: 12rem;
-        right: 11rem;
+        top: 25vw;
+        right: 11vw;
     }
 
     #menu-header {
@@ -100,7 +100,8 @@ main {
     }
 
     #chef-header {
-        top: 19rem;
+        top: 39vw;
+        font-size: 3vw;
     }
 
 }
