@@ -30,7 +30,14 @@ The work on this particular plane had something different comapared to all the o
 
 The main objective for this project was to create a restaurant website that would serve as a platform for the potential customer to explore the story and the main offer of the kitchen. In addition to that I also felt that it would be profitable to highlight the history and culinary education of the lead chef in the kitchen. As additional features this project also offers the possibility of booking a table at the restaurant both as a website member and as a simple first time visitor. All the users registered to the website have also the chance to update or delete reservation made. 
 
+## Interactions and Features
 
+### Future Features
+
+Although the website fullfills the tasks required by a normal restaurant website there are some features and functionalities that could be included as add-ons, in particular:
+- Adding a system that would send discounts to registered users
+- Adding a Twitch live-stream of the kitchen (this is the reason behind the Twitch link in the footer)
+- Adding a personalized and effectie newsletter service that would distinguish itself from all the other newsletter services 
 
 
 
