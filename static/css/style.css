@@ -51,13 +51,6 @@
     top: 9rem;
 }
 
-/* header section */
-
-h1 {
-    color: rgb(93, 185, 85);
-    margin-top: 6rem;
-    font-size: 7vw;
-}
 
 /* main section */
 
@@ -76,6 +69,15 @@ main {
 #maps-header {
     margin-top: 4rem;
     margin-bottom: 1rem;
+}
+
+/* logout.html */
+
+#log-out-form {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* footer section */
