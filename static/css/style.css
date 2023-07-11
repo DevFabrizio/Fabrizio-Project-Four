@@ -79,6 +79,7 @@ main {
 
 /* media queries section */
 
+/* tablet size */
 
 @media screen and (min-width: 426px) {
     
@@ -102,6 +103,23 @@ main {
     #chef-header {
         top: 39vw;
         font-size: 3vw;
+    }
+
+}
+
+/* laptop size */
+
+@media screen and (min-width: 768px) {
+
+    /* menu.html */
+
+    .lg-screen {
+        max-width: 70%;
+        margin: auto;
+    }
+
+    .menu-container {
+        flex-direction: row;
     }
 
 }
