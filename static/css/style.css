@@ -73,11 +73,21 @@ main {
 
 /* logout.html */
 
-#log-out-form {
+.user-access-form {
     margin-top: 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: none;
+    border-radius: 2%;
+    box-shadow: 3px 3px 3px 3px rgb(39, 39, 39);
+    padding: 1rem;
+}
+
+/* signup.html */
+
+#signup-form {
+    max-width: 80%;
 }
 
 /* footer section */

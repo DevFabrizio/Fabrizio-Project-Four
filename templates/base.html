@@ -16,7 +16,7 @@
           {% if user.is_authenticated %}
           <span id="username" class="col-1 ms-2 me-5 align-baseline">{{ user }}</span>
           {% else %}
-          <a class="nav-link" href="{% url 'account_login' %}">Log-in</a>
+          <a class="nav-link ms-2" href="{% url 'account_login' %}">Log-in</a>
           {% endif %}
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
