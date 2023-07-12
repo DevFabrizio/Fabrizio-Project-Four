@@ -1,10 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1 class="text-center">Booking Details</h1>
-<div class="container text-center">
+<h1 class="text-center" id="booking-form-header">Booking Details</h1>
+{% if success_message %}
+<div class="row mt-5 ms-auto me-auto text-center" id="success-msg-container">
+    <div id="reservation-success-msg" class="alert alert-success">{{ success_message }}</div>
+</div>
+{% endif %}
+<div class="container text-center mt-5" id="booking-form">
     <div class="row">
-        <div class="card col-lg-3 col-md-4 col-sm-12 mx-auto">
+        <div class="card col-lg-3 col-md-4 col-sm-12 mx-auto" id="booking-card">
            <form action="" method="post">
             {% csrf_token %}
                 <p for="reservation_name">Reservation Name:</p>       
@@ -21,11 +26,6 @@
            </form>
         </div>
     </div>
-    {% if success_message %}
-    <div class="row">
-        <div id="reservation-success-msg" class="col-4">{{ success_message }}</div>
-    </div>
-    {% endif %}
 </div>
 
 

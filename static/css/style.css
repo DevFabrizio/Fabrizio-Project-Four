@@ -64,6 +64,30 @@ main {
     max-width: 75%;
 }
 
+/* booking.html */
+
+#booking-form {
+    box-shadow: 8px 6px 13px 3px grey;
+    border-radius: 2%;
+    max-width: 80%;
+}
+
+#booking-card {
+    border: none;
+}
+
+#booking-form-header {
+    margin-top: 60px;
+}
+
+#success-msg-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 90%;
+    
+}
+
 /* maps.html */
 
 #maps-header {
