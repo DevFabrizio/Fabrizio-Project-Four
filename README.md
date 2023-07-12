@@ -32,7 +32,22 @@ The main objective for this project was to create a restaurant website that woul
 
 ### Target Audience
 
-Clearly a restaurant as physical entity barely poses a limit when it comes to admittance. That being said, we must consider which type of customer a high end restaurant could attract. Usually these types of dining experiences are structured as to subtly invite a more sophisticated customer base. The typical michelin starred restaurant customer reserves a table knowing full well that they are preparing for a service and tasting event out of the ordinary. The cost factor is almost always present but it should necesseraliy constitute an entry barrier as there are many excellent kitchens around the world with prices that most if not any can afford. Given this initial information we need to take a step back and analize our customer base when it comes to traffic to the website. In this case the website doesn't initially filter any particular type of potential customer because everyone that can afford an internet connection can visit the website. The audience filtering will only begin once the guest will browse the website and most importantly the filtering will be passive as there are no pay-walls or subscription for the services provided by this project. Essentially the customer once they realize which type of offer this restaurant provides, are going to decide if they want to book a table or leave the page. Compared to other types of web pages, this method surely doesn't the best ROI in terms of traffic, but no high-end restaurant would make that a strategy. 
+Clearly a restaurant as physical entity barely poses a limit when it comes to admittance. That being said, we must consider which type of customer a high end restaurant could attract. Usually these types of dining experiences are structured as to subtly invite a more sophisticated customer base. The typical michelin starred restaurant customer reserves a table knowing full well that they are preparing for a service and tasting event out of the ordinary. The cost factor is almost always present but it should necesseraliy constitute an entry barrier as there are many excellent kitchens around the world with prices that most if not any can afford. Given this initial information we need to take a step back and analize our customer base when it comes to traffic to the website. In this case the website doesn't initially filter any particular type of potential customer because everyone that can afford an internet connection can visit the website. The audience filtering will only begin once the guest will browse the website and most importantly the filtering will be passive as there are no pay-walls or subscription for the services provided by this project. Essentially the customer once they realize which type of offer this restaurant provides, are going to decide if they want to book a table or leave the page. Compared to other types of web pages, this method surely doesn't the best ROI in terms of traffic, but no high-end restaurant would make that a strategy.
+
+## User Story
+
+The following is a brief list of the actions a potential user might want to make once they visit this website:
+
+#### As a User I want to:
+
+- Land on a page which will contain the website core content and a meaningful way to navigate through the pages.
+- Access a menu section where I can get a general idea of what kind of menu options to expect.
+- Read about the restaurant and its features
+- Reserve a table without having to subscribe to a newsletter or other services
+- Being able to subscribe to the website in order to have an account that allows me to access all my past and future reservations
+- Being able to make new reservations as a subscribed user
+- Being able to modify and/or delete reservations I made
+- Being able to log out and log back in the website without any particular obstacle
 
 ## Interactions and Features
 
