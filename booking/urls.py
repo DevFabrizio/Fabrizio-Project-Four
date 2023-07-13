@@ -1,6 +1,11 @@
 from . import views
 from django.urls import path
 
+"""
+list of url path to allow the user to browse trhough the pages and
+to pass the relevant ids for the edit and delete functions of the database
+"""
+
 urlpatterns = [
     path('', views.Home.as_view(), name='home'),
     path('menu.html/', views.Menu.as_view(), name='menu'),
