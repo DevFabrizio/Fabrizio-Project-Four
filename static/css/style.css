@@ -51,7 +51,6 @@
     top: 9rem;
 }
 
-
 /* main section */
 
 main {
@@ -60,7 +59,7 @@ main {
 
 /* user_booking.html */
 
-.card {
+#user-booking-form {
     max-width: 75%;
     box-shadow: 8px 6px 13px 3px grey;
     border-radius: 2%;
