@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1 class="text-center">These are your reservations</h1>
+<h1 class="text-center mt-5">These are your reservations</h1>
 <div class="container">
    <div class="row">
       {% for reservation in reservations %}
-         <div class="card col-lg-3 col-md-4 col-sm-1 g-3 mx-auto">
+         <div class="card col-lg-3 col-md-4 col-9 g-3 mx-auto">
             <div class="card-body text-center">
                <h5 class="card-title">{{ reservation }}</h5>
                <h6 class="card-subtitle mb-2 text-body-secondary">Time of the reservation</h6>
