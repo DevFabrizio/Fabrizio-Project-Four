@@ -7,26 +7,36 @@ from .forms import BookingForm, UserReservationForm
 
 
 class Home(generic.ListView):
+    # view to direct to the home page
     def get(self, request):
         return render(request, 'menu.html')
 
 
 class Menu(View):
+    # view to direct to the menu page
     def get(self, request):
         return render(request, 'menu.html')
 
 
 class Signup(View):
+    # view to direct to the signup page, logic handled by django.allauth
     def get(self, request):
         return render(request, 'signup.html')
 
 
 class Maps(View):
+    # view to direct to the maps page
     def get(self, request):
         return render(request, 'maps.html')
 
 
 class ConfirmDelete(View):
+    """
+    view that directs to the confirmation of deletion page.
+    the get method retrieves the correct
+    reservation to delete through the reservation id.
+    the post method deletes that reservation when confirmed by the user
+    """
 
     def get(self, request, reservation_id):
         reservation = get_object_or_404(
@@ -50,6 +60,11 @@ class ConfirmDelete(View):
 
 
 class EditReservation(View):
+    """
+    view to direct to the edit reservation page
+    the get method restrieves the selected res through the id
+    the post method resubmites the reservation after the user has edited it
+    """
     def get(self, request, reservation_id):
         reservation = get_object_or_404(
             UserReservation,
@@ -82,7 +97,10 @@ class EditReservation(View):
 
 
 class UserReservationsPage(View):
-
+    """ view to direct to the user reservation page,
+        the get method retrieves
+        all the reservations made by the logged in user
+    """ 
     def get(self, request):
         reservations = UserReservation.objects.filter(user=request.user)
         context = {
@@ -92,6 +110,9 @@ class UserReservationsPage(View):
 
 
 class DeleteReservation(View):
+    """
+    view to delete the confirmed reservation when prompted by the user
+    """
 
     def post(self, request, reservation_id):
         if request.method == 'POST':
@@ -103,7 +124,11 @@ class DeleteReservation(View):
 
 
 class UserReservations(View):
-
+    """
+    view to create the reservation from a logged in user
+    the get method displays all the fields that the user needs to fill,
+    the post method submits the reservation to the database
+    """
     def get(self, request):
         form = UserReservationForm()
 
@@ -142,16 +167,15 @@ class UserReservations(View):
 
 
 class BookingView(View):
-
+    """
+    view to create the reservation for users without an account.
+    the get method displays all the required fields.
+    the post method saves the reservation to the database
+    """
     def get(self, request):
         form = BookingForm()
         context = {
             'form': form,
-            # 'reservation_name': form['reservation_name'],
-            # 'time_of_reservation': form['time_of_reservation'],
-            # 'num_of_guests': form['num_of_guests'],
-            # 'allergies': form['allergies'],
-            # 'kids_under_10': form['kids_under_10'],
             }
         return render(request, 'booking.html', context)
 
