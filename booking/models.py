@@ -5,6 +5,10 @@ from django.contrib.auth.models import User
 
 
 class Booking(models.Model):
+    """
+    class to create the database model for booking
+    made without an associated user
+    """
 
     time_of_reservation = models.DateTimeField(
         auto_now=False, auto_now_add=False)
@@ -18,6 +22,12 @@ class Booking(models.Model):
 
 
 class UserReservation(models.Model):
+    """
+    class to create a database model which includes the user.
+    The user database model is automatically created by the
+    django.allauth library which provides also the login/logout
+    and signup forms
+    """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     time_of_reservation = models.DateTimeField(
         auto_now=False, auto_now_add=False)
