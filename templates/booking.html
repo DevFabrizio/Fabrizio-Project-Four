@@ -2,11 +2,13 @@
 {% block content %}
 
 <h1 class="text-center" id="booking-form-header">Booking Details</h1>
+<!-- logic to display the success message once the user submits a correct reservation -->
 {% if success_message %}
 <div class="row mt-5 ms-auto me-auto text-center success-msg-container">
     <div id="reservation-success-msg" class="alert alert-success">{{ success_message }}</div>
 </div>
 {% endif %}
+<!-- booking form styled with the bootstrap card element and some custom css -->
 <div class="container text-center mt-5" id="booking-form">
     <div class="row">
         <div class="card col-lg-3 col-md-4 col-sm-12 mx-auto" id="booking-card">
