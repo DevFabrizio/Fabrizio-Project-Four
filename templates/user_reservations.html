@@ -3,6 +3,7 @@
 <h1 class="text-center mt-5">These are your reservations</h1>
 <div class="container">
    <div class="row">
+      <!-- logic to display all reservations made by a logged in user and buttons to edit or delete the reservation -->
       {% for reservation in reservations %}
          <div class="card col-lg-3 col-md-4 col-9 g-3 mx-auto">
             <div class="card-body text-center">
@@ -15,6 +16,7 @@
                <p class="card-text">{{ reservation.allergies }}</p>
                <h6 class="card-subtitle mb-2 text-body-secondary">Children under 10</h6>
                <p class="card-text">
+                  <!-- logic to alter the text of the checkbox result. displays yes or no instead of a boolean value -->
                   {% if reservation.kids_under_10 %}
                   Yes
                   {% else %}
