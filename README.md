@@ -51,6 +51,13 @@ The following is a brief list of the actions a potential user might want to make
 
 ## Interactions and Features
 
+### Features Included
+
+This is a brief description of the features included in the website:
+
+- ![Pic]()
+    - This nav bar has been created using a Bootstrap element. It displays the navigation links on the left, which tranforms and regroup into a sandwich style navigation once the size of the device screen becomes small enough to allow the style to kick in. The header text on the left also serves as a link to redirect to the main page once clicked. In addition to that if a user registers on the website the name which they used will be shown on the navbar too. This allows the user to identify the logged in status. 
+
 ### Future Features
 
 Although the website fullfills the tasks required by a normal restaurant website there are some features and functionalities that could be included as add-ons, in particular:
