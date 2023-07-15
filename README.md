@@ -58,6 +58,15 @@ This is a brief description of the features included in the website:
 - ![Pic]()
     - This nav bar has been created using a Bootstrap element. It displays the navigation links on the left, which tranforms and regroup into a sandwich style navigation once the size of the device screen becomes small enough to allow the style to kick in. The header text on the left also serves as a link to redirect to the main page once clicked. In addition to that if a user registers on the website the name which they used will be shown on the navbar too. This allows the user to identify the logged in status. 
 
+- ![Pic]()
+    - The first hero image and subsequent section content is all about a general presentation of the restaurant. This brief chunk of text is dedicated to explaining in a short but engaging manner the core values of the restaurant. The image and text chosen was designed to not bore the user and to increase the likelyhood of further investigation on the web page. 
+
+- ![Pic]()
+    - The second section on the main page is for a classic example of the menu. Now, when it comes to the menu of high end restaurant it us usually a good idea to display a few recipe but never the entire menu or the prices. As previoulsy discussed, the clientele of this type of restaurant already knows that the cost is going to be above average. The examples of the menu are there to testify how the kitchen ideally process the thought of a new dish and how it comes to fruition for the customer.
+
+- ![Pic]()
+    - The last section of the main page is dedicated to some background information about the lead chef. The chef is obviously the main professional figure in every restaurant, but even more so in high end ones. In this case I wanted to reiterate the concept of rediscovery of the island and its native supply of excellent material for new and exciting recipes. An accompanying picture creates a sense of "fame" around the chef as a person and will surely intrigue the customer who will look for him once seated.
+
 ### Future Features
 
 Although the website fullfills the tasks required by a normal restaurant website there are some features and functionalities that could be included as add-ons, in particular:
