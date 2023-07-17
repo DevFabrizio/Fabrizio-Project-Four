@@ -119,6 +119,17 @@ main {
     max-width: 80%;
 }
 
+/* confirm_delete.html */
+
+#confirm-del-form {
+    max-width: 80%;
+}
+
+#delete-confirm-header {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
 /* footer section */
 
 .fixed-bottom {
