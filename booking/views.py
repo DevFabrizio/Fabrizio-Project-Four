@@ -1,3 +1,4 @@
+# from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
 from .models import Booking, UserReservation
@@ -96,31 +97,20 @@ class EditReservation(View):
             return render(request, 'edit_reservation.html', context)
 
 
+# @login_required
 class UserReservationsPage(View):
-    """ view to direct to the user reservation page,
+    """
+        view to direct to the user reservation page,
         the get method retrieves
         all the reservations made by the logged in user
-    """ 
+    """
+
     def get(self, request):
         reservations = UserReservation.objects.filter(user=request.user)
         context = {
             'reservations': reservations,
         }
         return render(request, 'user_reservations.html', context)
-
-
-class DeleteReservation(View):
-    """
-    view to delete the confirmed reservation when prompted by the user
-    """
-
-    def post(self, request, reservation_id):
-        if request.method == 'POST':
-            reservation = UserReservation.objects.get(
-                id=reservation_id, user=request.user)
-
-            reservation.delete()
-        return redirect('user_reservations')
 
 
 class UserReservations(View):
