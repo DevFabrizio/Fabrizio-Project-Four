@@ -130,6 +130,18 @@ main {
     margin-bottom: 20px;
     font-weight: bold;
 }
+
+/* edit_reservation.html */
+
+#edit-header {
+    margin-top: 80px;
+}
+
+#edit-form {
+    max-width: 80%;
+}
+
+
 /* footer section */
 
 .fixed-bottom {
