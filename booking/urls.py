@@ -22,6 +22,4 @@ urlpatterns = [
     path('edit_reservation.html/<int:reservation_id>/',
          views.EditReservation.as_view(),
          name='edit_reservation'),
-
-
 ]

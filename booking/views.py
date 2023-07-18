@@ -1,6 +1,8 @@
 # from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
+from django.contrib.auth.mixins import UserPassesTestMixin
+from django.http import HttpResponse
 from .models import Booking, UserReservation
 from .forms import BookingForm, UserReservationForm
 
@@ -31,6 +33,57 @@ class Maps(View):
         return render(request, 'maps.html')
 
 
+# class ConfirmDelete(UserPassesTestMixin, View):
+#     """
+#     View that directs to the confirmation of deletion page.
+#     The get method retrieves the correct reservation to delete
+#     through the reservation id. The post method deletes that
+#     reservation when confirmed by the user.
+#     """
+
+#     def test_func(self):
+#         reservation = get_object_or_404(self.get_queryset(),
+#                                         id=self.kwargs['reservation_id'])
+
+#         # Allow superusers to delete any reservation
+#         if self.request.user.is_superuser:
+#             return True
+
+#         # Allow logged-in users to delete their own reservations
+#         return self.request.user == reservation.user
+
+#     def get_queryset(self):
+#         # Determine the model based on the user's authentication status
+#         if self.request.user.is_authenticated:
+#             return UserReservation.objects.filter(user=self.request.user)
+#         else:
+#             return Booking.objects.all()
+
+#     def get(self, request, reservation_id):
+#         try:
+#             reservation = UserReservation.objects.get(id=reservation_id, user=request.user)
+#         except UserReservation.DoesNotExist:
+#             reservation = get_object_or_404(Booking, id=reservation_id)
+
+#         form = UserReservationForm(instance=reservation)
+#         context = {
+#             'form': form,
+#             'reservation': reservation,
+#         }
+#         return render(request, 'confirm_delete.html', context)
+
+#     def post(self, request, reservation_id):
+#         reservation = get_object_or_404(self.get_queryset(), id=reservation_id)
+
+#         # Check if the user has permission to delete the reservation
+#         if self.test_func():
+#             reservation.delete()
+#             return redirect('user_reservations')
+#         else:
+#             # Handle unauthorized deletion attempt (optional)
+#             return HttpResponse("You do not have permission"
+#                                 "to delete this reservation.")
+
 class ConfirmDelete(View):
     """
     view that directs to the confirmation of deletion page.
@@ -55,7 +108,6 @@ class ConfirmDelete(View):
         if request.method == 'POST':
             reservation = UserReservation.objects.get(
                 id=reservation_id, user=request.user)
-
             reservation.delete()
         return redirect('user_reservations')
 
@@ -107,8 +159,10 @@ class UserReservationsPage(View):
 
     def get(self, request):
         reservations = UserReservation.objects.filter(user=request.user)
+        all_res = Booking.objects.all()
         context = {
             'reservations': reservations,
+            'all_res': all_res
         }
         return render(request, 'user_reservations.html', context)
 
@@ -171,14 +225,14 @@ class BookingView(View):
 
     def post(self, request):
         form = BookingForm()
+        success_message = """
+            Your reservation has been submitted correctly
+            """
 
         if request.method == 'POST':
             form = BookingForm(request.POST)
             if form.is_valid():
                 form.save()
                 form = BookingForm()
-                success_message = """
-                    Your reservation has been submitted correctly
-                    """
         context = {'form': form, 'success_message': success_message}
         return render(request, 'booking.html', context)
