@@ -1,7 +1,7 @@
 # from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
-from django.contrib.auth.decorators import user_passes_test
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import UserPassesTestMixin
 from .models import Booking, UserReservation
 from .forms import BookingForm, UserReservationForm
@@ -47,6 +47,11 @@ class ConfirmDelete(View):
             id=reservation_id,
             user=request.user)
         form = UserReservationForm(instance=reservation)
+
+        # reservation = get_object_or_404(
+        #     Booking,
+        #     id=reservation_id,)
+        # form = BookingForm(instance=reservation)
         context = {
             'form': form,
             'reservation': reservation,
@@ -123,6 +128,7 @@ class UserReservations(View):
     the get method displays all the fields that the user needs to fill,
     the post method submits the reservation to the database
     """
+
     def get(self, request):
         form = UserReservationForm()
 

@@ -25,7 +25,7 @@ class UserReservationForm(ModelForm):
     """
 
     class Meta:
-        model = UserReservation
+        model = Booking
         fields = '__all__'
         exclude = ['user']
         widgets = {

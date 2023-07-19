@@ -9,7 +9,9 @@ class Booking(models.Model):
     class to create the database model for booking
     made without an associated user
     """
-
+    user = models.ForeignKey(User,
+                             on_delete=models.CASCADE,
+                             null=True, blank=True)
     time_of_reservation = models.DateTimeField(
         auto_now=False, auto_now_add=False)
     num_of_guests = models.IntegerField()
