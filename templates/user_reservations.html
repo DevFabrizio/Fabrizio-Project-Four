@@ -28,7 +28,7 @@
             </div>
          </div>
          {% endfor %}
-         {% for reservation in all_user_res %}
+         <!-- {% for reservation in all_user_res %}
          <div class="card col-lg-3 col-md-4 col-9 g-3 mx-auto">
             <div class="card-body text-center">
                <h5 class="card-title">{{ reservation }}</h5>
@@ -41,7 +41,7 @@
                <h6 class="card-subtitle mb-2 text-body-secondary">Children under 10</h6>
                <p class="card-text">
                   <!-- logic to alter the text of the checkbox result. displays yes or no instead of a boolean value -->
-                  {% if reservation.kids_under_10 %}
+                  <!-- {% if reservation.kids_under_10 %}
                   Yes
                   {% else %}
                   No   
@@ -51,7 +51,7 @@
                <a class="btn btn-warning" href="{% url 'edit_reservation' reservation.id %}">Edit</a>
             </div>
          </div>
-         {% endfor %}
+         {% endfor %} -->
       {% endif %}
       <!-- logic to display all reservations made by a logged in user and buttons to edit or delete the reservation -->
       {% for reservation in reservations %}

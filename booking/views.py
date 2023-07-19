@@ -42,11 +42,6 @@ class ConfirmDelete(View):
     """
 
     def get(self, request, reservation_id):
-        # reservation = get_object_or_404(
-        #     UserReservation,
-        #     id=reservation_id,
-        #     user=request.user)
-        # form = UserReservationForm(instance=reservation)
 
         reservation = get_object_or_404(
             Booking,
@@ -74,10 +69,9 @@ class EditReservation(View):
     """
     def get(self, request, reservation_id):
         reservation = get_object_or_404(
-            UserReservation,
-            id=reservation_id,
-            user=request.user)
-        form = UserReservationForm(instance=reservation)
+            Booking,
+            id=reservation_id)
+        form = BookingForm(instance=reservation)
         context = {
             'form': form,
             'reservation': reservation,
@@ -87,11 +81,10 @@ class EditReservation(View):
     def post(self, request, reservation_id):
 
         reservation = get_object_or_404(
-            UserReservation,
-            id=reservation_id,
-            user=request.user)
+            Booking,
+            id=reservation_id)
 
-        form = UserReservationForm(request.POST, instance=reservation)
+        form = BookingForm(request.POST, instance=reservation)
         if form.is_valid():
             form.save()
             return redirect('user_reservations')
@@ -111,11 +104,9 @@ class UserReservationsPage(View):
     """
 
     def get(self, request):
-        reservations = UserReservation.objects.filter(user=request.user)
+        reservations = Booking.objects.filter(user=request.user)
         all_res = Booking.objects.all()
-        all_user_res = UserReservation.objects.all()
         context = {
-            'all_user_res': all_user_res,
             'reservations': reservations,
             'all_res': all_res
         }
