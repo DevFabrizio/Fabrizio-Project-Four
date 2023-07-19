@@ -42,16 +42,16 @@ class ConfirmDelete(View):
     """
 
     def get(self, request, reservation_id):
-        reservation = get_object_or_404(
-            UserReservation,
-            id=reservation_id,
-            user=request.user)
-        form = UserReservationForm(instance=reservation)
-
         # reservation = get_object_or_404(
-        #     Booking,
-        #     id=reservation_id,)
-        # form = BookingForm(instance=reservation)
+        #     UserReservation,
+        #     id=reservation_id,
+        #     user=request.user)
+        # form = UserReservationForm(instance=reservation)
+
+        reservation = get_object_or_404(
+            Booking,
+            id=reservation_id,)
+        form = BookingForm(instance=reservation)
         context = {
             'form': form,
             'reservation': reservation,
@@ -60,8 +60,8 @@ class ConfirmDelete(View):
 
     def post(self, request, reservation_id):
         if request.method == 'POST':
-            reservation = UserReservation.objects.get(
-                id=reservation_id, user=request.user)
+            reservation = Booking.objects.get(
+                id=reservation_id)
             reservation.delete()
         return redirect('user_reservations')
 

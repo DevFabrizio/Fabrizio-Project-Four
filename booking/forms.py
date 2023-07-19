@@ -10,6 +10,7 @@ class BookingForm(ModelForm):
     class Meta:
         model = Booking
         fields = '__all__'
+        exclude = ['user']
         widgets = {
             'time_of_reservation': DateTimeInput(attrs={
                 'type': 'datetime-local'})
