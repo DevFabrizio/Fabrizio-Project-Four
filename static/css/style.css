@@ -1,3 +1,9 @@
+/* base.html */
+
+#superuser {
+    color: green;
+}
+
 /* menu.html */
 
 .img-bg {
@@ -140,11 +146,10 @@ main {
     max-width: 80%;
 }
 
-
 /* footer section */
 
-.fixed-bottom {
-    background-color: #F8F9FA;
+#footer {
+    background-color: rgba(206, 206, 206, 0.5);
 }
 
 /* media queries section */

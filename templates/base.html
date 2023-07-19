@@ -15,7 +15,9 @@
     <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand m-0" href="{% url 'home' %}">Matinicus</a>
-          {% if user.is_authenticated %}
+          {% if user.is_superuser %}
+          <span id="superuser" class="col-1 ms-2 me-5 align-baseline">{{ user }}</span>
+          {% elif user.is_authenticated %}
           <span id="username" class="col-1 ms-2 me-5 align-baseline">{{ user }}</span>
           {% else %}
           <a class="nav-link ms-2" href="{% url 'account_login' %}">Log-in</a>
@@ -47,7 +49,7 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-12 p-4 text-center bg-color-red">
+          <div class="col-12 p-4 fixed-bottom text-center" id="footer">
             <a href="https://www.tiktok.com/login?redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fen&lang=en&enter_method=mandatory" class="col-3 p-4 link-opacity-75-hover"><i class="fa-brands fa-tiktok fa-beat-fade"></i></a>
             <a href="https://www.instagram.com/" class="col-3 p-4 link-opacity-75-hover"><i class="fa-brands fa-instagram fa-flip"></i></a>
             <a href="https://www.twitch.tv/" class="col-3 p-4 link-opacity-75-hover"><i class="fa-brands fa-twitch fa-shake"></i></a>
