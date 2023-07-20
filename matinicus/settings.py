@@ -32,6 +32,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '8000-devfabrizio-fabriziopro-7q3ycxov6ed.ws-eu100.gitpod.io',
     '8000-devfabrizio-fabriziopro-7q3ycxov6ed.ws-eu101.gitpod.io',
+    '8000-devfabrizio-fabriziopro-7q3ycxov6ed.ws-eu102.gitpod.io',
     'matinicus-restaurant.herokuapp.com',
     'localhost',
     'matinicus-restaurant-48d13f17f49c.herokuapp.com'

@@ -1,12 +1,12 @@
 # from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.mixins import UserPassesTestMixin
 from .models import Booking, UserReservation
 from .forms import BookingForm, UserReservationForm
+from django.core.exceptions import ValidationError
 
 # Create your views here.
+MAX_CAPACITY = 100
 
 
 class Home(generic.ListView):
@@ -137,22 +137,25 @@ class UserReservations(View):
         success_message = """
             Your reservation has been submitted correctly
             """
-        reservation_name = ""
         if request.method == 'POST':
             form = UserReservationForm(request.POST)
             if form.is_valid():
                 reservation = form.save(commit=False)
+                reservation.user = request.user
                 """
                 the "reservation.user var self assigns the user
                 to the form based on the logged-in user
                 """
-                reservation.user = request.user
-                reservation.save()
-                form = UserReservationForm()
+                try:
+                    reservation.clean()  # runs the clean method from the model
+                except ValidationError as e:
+                    form.add_error(None, str(e))  # Add the error to the form
+                else:
+                    reservation.save()
+                    form = UserReservationForm()
         context = {
             'form': form,
             'success_message': success_message,
-            'reservation_name': reservation_name,
             }
         return render(request, 'user_booking.html', context)
 
