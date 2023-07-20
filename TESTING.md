@@ -1,0 +1,1 @@
+Insert here the table for all the manual testing procedures
