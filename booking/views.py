@@ -155,7 +155,7 @@ class UserReservations(View):
                     reservation.save()
                     form = UserReservationForm()
             else:
-                success_message = "This time and date is fully booked!"
+                success_message = "THIS TIME AND DATE IS FULLY BOOKED!"
 
         context = {
             'form': form,
@@ -179,14 +179,25 @@ class BookingView(View):
 
     def post(self, request):
         form = BookingForm()
-        success_message = """
-            Your reservation has been submitted correctly
-            """
+        success_message = ""
 
         if request.method == 'POST':
             form = BookingForm(request.POST)
             if form.is_valid():
-                form.save()
-                form = BookingForm()
+                reservation = form.save(commit=False)
+
+                try:
+                    reservation.clean()  # runs the clean method from the model
+                except ValidationError as e:
+                    form.add_error(None, str(e))  # Add the error to the form
+                else:
+                    success_message = """
+                        Your reservation has been submitted correctly
+                        """
+                    reservation.save()
+                    form = BookingForm()
+            else:
+                success_message = "THIS TIME AND DATE IS FULLY BOOKED!"
+                # form.save
         context = {'form': form, 'success_message': success_message}
         return render(request, 'booking.html', context)
