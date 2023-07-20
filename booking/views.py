@@ -134,9 +134,7 @@ class UserReservations(View):
         return render(request, 'user_booking.html', context)
 
     def post(self, request):
-        success_message = """
-            Your reservation has been submitted correctly
-            """
+        success_message = ""
         if request.method == 'POST':
             form = UserReservationForm(request.POST)
             if form.is_valid():
@@ -151,8 +149,14 @@ class UserReservations(View):
                 except ValidationError as e:
                     form.add_error(None, str(e))  # Add the error to the form
                 else:
+                    success_message = """
+                        Your reservation has been submitted correctly
+                        """
                     reservation.save()
                     form = UserReservationForm()
+            else:
+                success_message = "This time and date is fully booked!"
+
         context = {
             'form': form,
             'success_message': success_message,
