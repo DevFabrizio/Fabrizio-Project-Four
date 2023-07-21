@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from .models import Booking, UserReservation
+from .models import Booking
 from django.forms.widgets import DateTimeInput
 
 

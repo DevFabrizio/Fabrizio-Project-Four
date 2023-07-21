@@ -1,7 +1,7 @@
 # from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
-from .models import Booking, UserReservation
+from .models import Booking
 from .forms import BookingForm, UserReservationForm
 from django.core.exceptions import ValidationError
 
@@ -85,6 +85,7 @@ class EditReservation(View):
             id=reservation_id)
 
         form = BookingForm(request.POST, instance=reservation)
+
         if form.is_valid():
             form.save()
             return redirect('user_reservations')
@@ -198,6 +199,6 @@ class BookingView(View):
                     form = BookingForm()
             else:
                 success_message = "THIS TIME AND DATE IS FULLY BOOKED!"
-                # form.save
+
         context = {'form': form, 'success_message': success_message}
         return render(request, 'booking.html', context)
