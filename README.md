@@ -74,11 +74,12 @@ Although the website fullfills the tasks required by a normal restaurant website
 - Adding a Twitch live-stream of the kitchen (this is the reason behind the Twitch link in the footer)
 - Adding a personalized and effectie newsletter service that would distinguish itself from all the other newsletter services 
 
+## Technologies Used
 
-
-
+Below is a complete list of all the technologies used for this project.
 
 tech used:
+
 - cloudinary
 - django allauth library
 - django
@@ -89,3 +90,10 @@ tech used:
 - postgresql
 - django-datetime-picker
 - Google Maps with the link from the share link in google maps
+
+### Bugs
+
+During the development of this project I encoutered some bugs that I was able to fix, mainly through the use of support from the slack community but also by reading the Django Framework documentation and by some research on Google. Here is a list of the bugs and what I did to solve them. 
+
+- The first main bug was a functionality I wanted to add that would have allowed the admin to manage all the reservations from the website instead that having to accomplish that on the django admin page. The main difficulty was that when I tried to access a reservation made from an anonymous user or from a logged in user the View would return an error because it was trying to access the view by using the admin credentials. This is how I solved it: 
+    - First of all I deleted a model repetition I had in my database (one model for the users and one model for the visitors but both models had the same fields). Sequently I paired the two forms I had with the same model. Then in my view I was finally able to iterate through all the reservations made by both registeres users and visitors. Once I was able to do that I set the view to only filter the reservations through their IDs and that allowed me to let the admin being able to access all the reservations made.
