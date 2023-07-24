@@ -12,17 +12,17 @@
 <div class="container text-center mt-5" id="booking-form">
     <div class="row">
         <div class="card col-lg-3 col-md-4 col-sm-12 mx-auto" id="booking-card">
-           <form action="" method="post">
+           <form method="post">
             {% csrf_token %}
-                <p for="reservation_name">Reservation Name:</p>       
-                <p  id="reservation_name">{{ form.reservation_name }}</p>
-                <p for="time_of_reservation">Time of Reservation:</p>
+                <p>Reservation Name:</p>       
+                <p id="reservation_name">{{ form.reservation_name }}</p>
+                <p>Time of Reservation:</p>
                 <p id="time_of_reservation">{{ form.time_of_reservation }}</p>
-                <p for="num_of_guests">Number of guests:</p>
+                <p>Number of guests:</p>
                 <p id="num_of_guests">{{ form.num_of_guests }}</p>
-                <p for="allergies">Allergies:</p>
+                <p>Allergies:</p>
                 <p id="allergies">{{ form.allergies }}</p>
-                <span for="kids_under_10">Children under 10:</span>
+                <span>Children under 10:</span>
                 <span id="kids_under_10">{{ form.kids_under_10}}</span>
                 <input type="submit" class="btn btn-success mt-3 mb-1" value="Send Reservation">
            </form>
