@@ -2,6 +2,19 @@
 
 #superuser {
     color: green;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#site-header {
+    font-family: 'Cinzel', serif;
+}
+
+nav {
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* menu.html */

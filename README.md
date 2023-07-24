@@ -29,6 +29,8 @@ The work on this particular plane had something different comapared to all the o
 
 The colors used for the website were decided on a base of simplicity and effectiveness. This comes from a brief analysis of other websites with similar goals to mine. For these type of pages what is majorly highlighted is the redability and contrast of the various components. The colors chosen are sometimes mostly white. Especially when the restaurant has a classical style and wishes to convey that old-time high end style. In case of more modern and future oriented pages it is not unusual to find the use of black or dark bckgrounds with bright text. In case of this particular project I felt the need to emphasize the concept of "local" and "naturally sourced" which is one of the major premises of the restaurant. This led me to prevalently use a combination of light colors and a classic black text.
 
+The fonts I decided to apply to this project are: Cinzel for the main headers and Montserrat for the descritpive text. Prior to this decision a quick read throught he typography documentation on Google Fonts was necessary. The main lesson learned is that as a basic rule it would be ideal to use no more than 3 different fonts and to pair fonts from a Header/Supporting Text point of view. As a general rule I also decided to apply the rule of pairing fonts that would not contrast but compliment each other. This is usually done by matching Serif and Sans-serif fonts but any combination can work if the fonts are of the same family or don't presernt features that are opposite of each other.
+
 
 ## Project Goal
 
@@ -94,6 +96,8 @@ tech used:
 - postgresql
 - django-datetime-picker
 - Google Maps with the link from the share link in google maps
+- Google fonts
+
 
 ### Bugs
 
