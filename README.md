@@ -25,6 +25,10 @@ This plane is the one that most of all has been influenced by the standard pract
 
 The work on this particular plane had something different comapared to all the others. for this plane I decided to explore other Michelin starred restaurants' websites. I did this in order to get a better grasp of what a high end restaurant website looked like. What I discovered is that mainly these pages rely on simplicity and minimalism which I believe is somewhat linked to today's concept of modern cuisine. It is worthy of notice that many of these restaurants don't actually have a proprietary booking system and mainly rely on third parties' apps or simple email. This initial research has led me to develop a similar solution. In the website there are big images in the landing page, accompanied by some small, abstract text. I did this in order to create curiosity in the user and push themm to investigate the website further. The pages dedicated to the reservation system are intentionally kept simple since I want to let the user only focus on completing the reservation succesfully.
 
+### Fonts and Colors
+
+The colors used for the website were decided on a base of simplicity and effectiveness. This comes from a brief analysis of other websites with similar goals to mine. For these type of pages what is majorly highlighted is the redability and contrast of the various components. The colors chosen are sometimes mostly white. Especially when the restaurant has a classical style and wishes to convey that old-time high end style. In case of more modern and future oriented pages it is not unusual to find the use of black or dark bckgrounds with bright text. In case of this particular project I felt the need to emphasize the concept of "local" and "naturally sourced" which is one of the major premises of the restaurant. This led me to prevalently use a combination of light colors and a classic black text.
+
 
 ## Project Goal
 
