@@ -73,6 +73,12 @@ This is a brief description of the features included in the website:
 - ![Pic]()
     - The last section of the main page is dedicated to some background information about the lead chef. The chef is obviously the main professional figure in every restaurant, but even more so in high end ones. In this case I wanted to reiterate the concept of rediscovery of the island and its native supply of excellent material for new and exciting recipes. An accompanying picture creates a sense of "fame" around the chef as a person and will surely intrigue the customer who will look for him once seated.
 
+- ![Pic]()
+    - The GPS icon located in the footer leads to this maps page. This page was designed as a little add-on in order to spark curiosity for the user. The page features a main section with an iframe element that contains an embedded Google map taken directly from the Google Maps website. The main goal for this page is to display a map where the user is able to pinpoint the location of the Matinicus island. This is to highlight not only the position of the restaurant but to remind any potential customer of how the location can play a huge part in what the offer and the peculiar type of recipes may be served in the restaurant. 
+
+- ![Pic]()
+    - 
+
 ### Future Features
 
 Although the website fullfills the tasks required by a normal restaurant website there are some features and functionalities that could be included as add-ons, in particular:
