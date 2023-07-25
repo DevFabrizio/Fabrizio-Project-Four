@@ -5,9 +5,7 @@
         <form class="card p-2 mx-auto text-center" id="edit-form" method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <a href="{% url 'user_reservations' %}">
-                <button class="btn btn-success">Confirm Edit</button>
-            </a>
+            <button class="btn btn-success">Confirm Edit</button>
         </form>
 
 {% endblock %}

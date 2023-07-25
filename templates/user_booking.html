@@ -11,17 +11,17 @@
 <div class="container text-center ">
     <div class="row">
         <div class="card col-lg-6 col-sm-12 mx-auto" id="user-booking-form">
-           <form action="" method="post">
+           <form method="post">
                 {% csrf_token %}
-                <p class="card-subtitle mb-2 text-body-secondary" for="reservation_name">Reservation Name:</p>       
+                <p class="card-subtitle mb-2 text-body-secondary">Reservation Name:</p>       
                 <p id="reservation_name">{{ form.reservation_name }}</p>
-                <p class="card-subtitle mb-2 text-body-secondary" for="time_of_reservation">Time of Reservation:</p>
+                <p class="card-subtitle mb-2 text-body-secondary">Time of Reservation:</p>
                 <p id="time_of_reservation">{{ form.time_of_reservation }}</p>
-                <p class="card-subtitle mb-2 text-body-secondary" for="num_of_guests">Number of guests:</p>
+                <p class="card-subtitle mb-2 text-body-secondary">Number of guests:</p>
                 <p id="num_of_guests">{{ form.num_of_guests }}</p>
-                <p class="card-subtitle mb-2 text-body-secondary" for="allergies">Allergies:</p>
+                <p class="card-subtitle mb-2 text-body-secondary">Allergies:</p>
                 <p id="allergies">{{ form.allergies }}</p>
-                <span class="card-subtitle mb-2 text-body-secondary" for="kids_under_10">Children under 10:</span>
+                <span class="card-subtitle mb-2 text-body-secondary">Children under 10:</span>
                 <span id="kids_under_10">{{ form.kids_under_10}}</span>
                 <input type="submit" class="btn btn-success mt-3 mb-1 d-block mx-auto" value="Send Reservation">
            </form>
