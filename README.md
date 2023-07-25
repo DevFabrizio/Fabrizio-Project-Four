@@ -77,7 +77,10 @@ This is a brief description of the features included in the website:
     - The GPS icon located in the footer leads to this maps page. This page was designed as a little add-on in order to spark curiosity for the user. The page features a main section with an iframe element that contains an embedded Google map taken directly from the Google Maps website. The main goal for this page is to display a map where the user is able to pinpoint the location of the Matinicus island. This is to highlight not only the position of the restaurant but to remind any potential customer of how the location can play a huge part in what the offer and the peculiar type of recipes may be served in the restaurant. 
 
 - ![Pic]()
-    - This shown in the image is the detail of the Booking page for the anonymous users of the page. Style and format are designed to maintain simplicity and let the user make the reservations without distractions like messages of discounts or particular offers. I felt it was uneccessary to add other elements of style since the goal of this section is simply to take and check the validity of the reservation. 
+    - This shown in the image is the detail of the Booking page for the anonymous users of the page. Style and format are designed to maintain simplicity and let the user make the reservations without distractions like messages of discounts or particular offers. I felt it was uneccessary to add other elements of style since the goal of this section is simply to take and check the validity of the reservation. This page also works as a blueprint for the users' reservations page as well. Basically both pages achieve the same result but for different type of users os the website. 
+
+- ![Pic]()
+    - Shown above is the form to sign up to the website. Style, fonts and colors match those of the other pages of the project. Maintaining these features allow the user to gain a sense of familiarity which could also potentially lead to marginal gains on customer retention. Similar to this page the Log-in and Log-out pages are also styled accordingly. These features are at the base for future features implemented as described in the corresponding section. 
 
 
 
