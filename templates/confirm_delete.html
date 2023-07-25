@@ -5,6 +5,6 @@
     <form class="card mx-auto p-2 text-center" id="confirm-del-form" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button class="btn btn-danger">Delete</button >
+        <button class="btn btn-danger small-button mx-auto">Delete</button >
     </form>
 {% endblock %}

@@ -1,3 +1,7 @@
+.small-button {
+    max-width: 20%;
+}
+
 /* base.html */
 
 #superuser {
