@@ -110,6 +110,7 @@ tech used:
 - django-datetime-picker
 - Google Maps with the link from the share link in google maps
 - Google fonts
+- [Markdown tables generator](https://www.tablesgenerator.com/markdown_tables)
 
 
 ### Bugs
