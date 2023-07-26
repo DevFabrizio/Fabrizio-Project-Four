@@ -81,7 +81,9 @@ This is a brief description of the features included in the website:
 
 - ![Pic]()
     - Shown above is the form to sign up to the website. Style, fonts and colors match those of the other pages of the project. Maintaining these features allow the user to gain a sense of familiarity which could also potentially lead to marginal gains on customer retention. Similar to this page the Log-in and Log-out pages are also styled accordingly. These features are at the base for future features implemented as described in the corresponding section. 
-
+    
+- ![Pic]()
+    - This is the user reservation page. As one of the most meaningful features on the website I decided to place direct access to it on the nav-bar. This page accomplishes a very important role which is basically 75% of the CRUD functionalities. Particularly this page shows all the reservations made by a logged in user. Every reservation is displayed as a card and has two buttons on the bottom to access the EDIT and DELETE functions. Once redirected to any of those links the user will prompt the changes and submit them. It's important to note some details about this feature. This page is only available to user who have registered an account on the website. In addition to this the admin has access to all the reservations made. This allows the admin to manage the entirety of the reservations made. 
 
 
 ### Future Features
@@ -123,4 +125,5 @@ During the development of this project I encoutered some bugs that I was able to
    - I created a method inside the model used for the bookings. This method checked the validity of the fields for the time of reservations and the number of guests. It then would query the database and filter the search to find all the bookings for a determined time of reservation. After that the method would check for the amount of guests in that specific time of reservation and if it is over a determined amount of guests the method raises an error. I then called this method in the view for the reservation before saving the reservation in the database as to report an error to the user in case their booking surpasses the limit for that specific time and date.
 
 - The third bug revolved around the html validation of the templates. In particular the issue was in the way I displayed the buttons for the confirmation of deletion and the submission of the edited booking. Both were buttons wrapped in anchor tags and the validator swiftly reminded me that it was a semantic error on the template.
+
     - In order to solve them I simply deleted the anchor tags and let the django functionalities take care of the button (With some added custom CSS and Bootstrap). Once the anchor tags were removed both forms kept working smoothly as tested.
