@@ -1,6 +1,6 @@
 # Testing the Project
 
-This is the file dedicated to the tests ran agianst the project to validate and confirm the functionalities added. The tables in this file were used to continually check the code written in order to implement the functionalities required by the project goals. 
+This is the file dedicated to the tests ran against the project to validate and confirm the functionalities added. The tables in this file were used to continually check the code written in order to implement the functionalities required by the project goals. 
 
 ### Validation 
 
@@ -33,3 +33,30 @@ This is the comprehensive table to replicate the manual testing of the website's
 | 012       | Ability to see all the reservations as an admin  | Pass         | Pass tests 011 003 007                                                                                                                 |       |                                                                                           |
 | 013       | Ability to edit the reservations as an admin     | Pass         | Pass tests 011 012 008                                                                                                                 |       |                                                                                           |
 | 014       | Ability to delete the reservations as an admin   | Pass         | Pass tests 011 012 009                                                                                                                 |       |                                                                                           |
+
+### Google DevTools Lighthouse reports
+
+The following table contains the results for the lighthouse reports for all html templates in mobile and desktop size
+
+| Lighthouse Report               | Performance | Accessibility | Best Practices | SEO |   |   |   |
+|---------------------------------|-------------|---------------|----------------|-----|---|---|---|
+| Main Page (mobile)              | 34          | 100           | 83             | 92  |   |   |   |
+| Main Page (desktop)             | 69          | 100           | 83             | 90  |   |   |   |
+| Reservations Page (mobile)      | 71          | 98            | 92             | 91  |   |   |   |
+| Reservations Page (desktop)     | 86          | 98            | 92             | 89  |   |   |   |
+| User Bookings Page (mobile)     | 71          | 90            | 92             | 91  |   |   |   |
+| User Bookings Page (desktop)    | 98          | 90            | 92             | 89  |   |   |   |
+| Logout Page (mobile)            | 77          | 100           | 92             | 91  |   |   |   |
+| Logout Page (desktop)           | 97          | 100           | 92             | 89  |   |   |   |
+| Login Page (mobile)             | 64          | 100           | 92             | 91  |   |   |   |
+| Login Page (desktop)            | 95          | 100           | 92             | 89  |   |   |   |
+| Signup Page (mobile)            | 72          | 100           | 92             | 91  |   |   |   |
+| Signup Page (desktop)           | 97          | 100           | 92             | 89  |   |   |   |
+| Booking Page (mobile)           | 74          | 90            | 92             | 91  |   |   |   |
+| Booking Page (desktop)          | 98          | 90            | 92             | 89  |   |   |   |
+| Maps Page (mobile)              | 61          | 97            | 83             | 91  |   |   |   |
+| Maps Page (desktop)             | 91          | 97            | 83             | 89  |   |   |   |
+| Confirm Delete Page (mobile)    | 71          | 100           | 92             | 91  |   |   |   |
+| Confirm Delete Page (desktop)   | 97          | 100           | 92             | 89  |   |   |   |
+| Edit Reservation Page (mobile)  | 73          | 100           | 92             | 91  |   |   |   |
+| Edit Reservation Page (desktop) | 89          | 100           | 92             | 89  |   |   |   |

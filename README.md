@@ -128,3 +128,7 @@ During the development of this project I encoutered some bugs that I was able to
 - The third bug revolved around the html validation of the templates. In particular the issue was in the way I displayed the buttons for the confirmation of deletion and the submission of the edited booking. Both were buttons wrapped in anchor tags and the validator swiftly reminded me that it was a semantic error on the template.
 
     - In order to solve them I simply deleted the anchor tags and let the django functionalities take care of the button (With some added custom CSS and Bootstrap). Once the anchor tags were removed both forms kept working smoothly as tested.
+
+## Deployment
+
+This section is dedicated to the steps I followed in order to successfully deploy the app on the Heroku hosting platform.
