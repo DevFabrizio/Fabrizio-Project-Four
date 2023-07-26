@@ -131,4 +131,25 @@ During the development of this project I encoutered some bugs that I was able to
 
 ## Deployment
 
-This section is dedicated to the steps I followed in order to successfully deploy the app on the Heroku hosting platform.
+This section is dedicated to the steps I followed in order to successfully deploy the app on the Heroku hosting platform. In particular this deployment was executed with the shortcut present on the Heroku which allows the user to deploy directly from the GitHub repository. 
+
+- Login to Heroku
+- Create a new app
+- Created a PostgreSQL database on ElephantSQL
+
+    - Created a new instance in ElephantSQL
+    - Named and defined the region for the database
+    - Select a plan
+    - Linked the database URL to the environment vars of the project
+    - Added the database URL to the settings.py file of the django app
+    - Migrated these initial changes to the database on Elephant SQL
+
+- Link this new app the the repository for the project
+- Add Database url, Secret Key and Port var to the Config Vars section on the app Settings
+- Add DISABLE_COLLECTSTATIC = 1 var to Config Vars in the app settings
+- Add Template Dirs and Static files variables in settings.py file
+- Add the Template Dirs variable to DIRS key in TEMPLATES list in settings.py file
+- Add the Heroku app name in ALLOWED HOSTS list in settings.py file
+- Add the Procfile
+- Git commit and push all the changes made to the repository
+- Deploy manually through GitHub on the Heroku Dashboard
