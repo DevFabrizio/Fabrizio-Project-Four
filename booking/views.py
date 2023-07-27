@@ -4,6 +4,8 @@ from django.views import generic, View
 from .models import Booking
 from .forms import BookingForm, UserReservationForm
 from django.core.exceptions import ValidationError
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 MAX_CAPACITY = 100
@@ -33,7 +35,7 @@ class Maps(View):
         return render(request, 'maps.html')
 
 
-class ConfirmDelete(View):
+class ConfirmDelete(LoginRequiredMixin, View):
     """
     view that directs to the confirmation of deletion page.
     the get method retrieves the correct
