@@ -33,6 +33,7 @@ This is the comprehensive table to replicate the manual testing of the website's
 | 012       | Ability to see all the reservations as an admin  | Pass         | Pass tests 011 003 007                                                                                                                 |       |                                                                                           |
 | 013       | Ability to edit the reservations as an admin     | Pass         | Pass tests 011 012 008                                                                                                                 |       |                                                                                           |
 | 014       | Ability to delete the reservations as an admin   | Pass         | Pass tests 011 012 009                                                                                                                 |       |                                                                                           |
+| 015       | Verify confirmations message JS effect           | Pass         | Pass tests 005 or 006, observe the success message disappear after the set time.                                                       |       | This is the only JS test                                                                  |
 
 ### Google DevTools Lighthouse reports
 
