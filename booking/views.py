@@ -63,7 +63,7 @@ class ConfirmDelete(LoginRequiredMixin, View):
         return redirect('user_reservations')
 
 
-class EditReservation(View):
+class EditReservation(LoginRequiredMixin, View):
     """
     view to direct to the edit reservation page
     the get method restrieves the selected res through the id
