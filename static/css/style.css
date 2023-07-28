@@ -30,7 +30,6 @@ main {
 
 #chef-img {
     width: 100%;
-    opacity: 0.5;
 }
 
 #hero-header {
@@ -73,6 +72,9 @@ main {
 #chef-header {
     position: absolute;
     top: 9rem;
+    border-radius: 10%; 
+    background-image: radial-gradient(rgba(255, 255, 255, 0.8), transparent); 
+    font-size: x-small;
 }
 
 /* main section */
