@@ -49,6 +49,16 @@ class ConfirmDelete(LoginRequiredMixin, View):
             Booking,
             id=reservation_id,)
         form = BookingForm(instance=reservation)
+
+        if request.user.is_superuser:
+            reservation = get_object_or_404(
+                Booking,
+                id=reservation_id)
+            form = BookingForm(instance=reservation)
+
+        elif request.user != reservation.user:
+            return redirect('user_reservations')
+
         context = {
             'form': form,
             'reservation': reservation,
