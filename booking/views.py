@@ -4,8 +4,8 @@ from django.views import generic, View
 from .models import Booking
 from .forms import BookingForm, UserReservationForm
 from django.core.exceptions import ValidationError
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+
 
 # Create your views here.
 MAX_CAPACITY = 100
@@ -69,11 +69,28 @@ class EditReservation(LoginRequiredMixin, View):
     the get method restrieves the selected res through the id
     the post method resubmites the reservation after the user has edited it
     """
+    # def test_func(self):
+    #     return self.request.user.is_superuser
+
     def get(self, request, reservation_id):
         reservation = get_object_or_404(
             Booking,
             id=reservation_id)
         form = BookingForm(instance=reservation)
+
+        """
+        This if statement allows the users to only access and modify
+        their own reservations and the superuser to modify all reservations
+        """
+        if request.user.is_superuser:
+            reservation = get_object_or_404(
+                Booking,
+                id=reservation_id)
+            form = BookingForm(instance=reservation)
+
+        elif request.user != reservation.user:
+            return redirect('user_reservations')
+
         context = {
             'form': form,
             'reservation': reservation,
