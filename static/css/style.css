@@ -21,14 +21,13 @@ main {
 
 .img-bg {
     max-width: 100%;
-    opacity: 0.5;
     position: relative;
 }
 
 #menu-bg {
     width: 100%;
-    opacity: 0.4;
 }
+
 #chef-img {
     width: 100%;
     opacity: 0.5;
@@ -38,6 +37,8 @@ main {
     position: absolute;
     top: 5rem;
     width: 9rem;
+    border-radius: 10%; 
+    background-image: radial-gradient(rgba(255, 255, 255, 0.8), transparent); 
 }
 
 #hero-p {
@@ -46,6 +47,8 @@ main {
     right: 2rem;
     width: 8rem;
     font-style: italic;
+    border-radius: 10%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.8), transparent);
 }
 
 #menu-header {
@@ -54,6 +57,8 @@ main {
     right: 1rem;
     width: 80vw;
     line-height: 1.7rem;
+    border-radius: 10%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.8), transparent);
 }
 
 .menu-container {
@@ -184,8 +189,9 @@ main {
     }
 
     #menu-header {
-        top: 13rem;
+        top: 10rem;
         right: 1rem;
+        width: 256px;
     }
 
     #chef-header {
