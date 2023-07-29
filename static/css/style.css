@@ -138,6 +138,14 @@ main {
     padding: 1rem;
 }
 
+/* login.html */
+
+#login-bg {
+    max-width: 100%;
+    margin-top: 4rem;
+    position: absolute;
+}
+
 /* signup.html */
 
 #signup-form {
@@ -201,6 +209,12 @@ main {
         font-size: 3vw;
     }
 
+    /* login.html */
+
+    #login-bg {
+        margin-top: -1rem;
+    }
+
 }
 
 /* laptop size */
@@ -216,6 +230,12 @@ main {
 
     .menu-container {
         flex-direction: row;
+    }
+    
+    /* login.html */
+
+    #login-bg {
+        margin-top: -3rem;
     }
 
 }
