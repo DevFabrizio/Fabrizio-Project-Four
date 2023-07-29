@@ -153,3 +153,7 @@ This section is dedicated to the steps I followed in order to successfully deplo
 - Add the Procfile
 - Git commit and push all the changes made to the repository
 - Deploy manually through GitHub on the Heroku Dashboard
+
+## Testing
+
+[Click this link to access the testing file](/TESTING.md)
