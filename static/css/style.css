@@ -150,6 +150,14 @@ main {
 
 #signup-form {
     max-width: 80%;
+    background-color: white;
+}
+
+#signup-bg {
+    max-width: 100%;
+    margin-top: 3rem;
+    position: absolute;
+    z-index: -1;
 }
 
 /* confirm_delete.html */
@@ -215,6 +223,12 @@ main {
         margin-top: -1rem;
     }
 
+    /* signup.html */
+
+    #signup-bg {
+        margin-top: -1rem;
+    }
+    
 }
 
 /* laptop size */
@@ -238,4 +252,9 @@ main {
         margin-top: -3rem;
     }
 
+    /* signup.html */
+
+    #signup-bg {
+        margin-top: -3rem;
+    }
 }
