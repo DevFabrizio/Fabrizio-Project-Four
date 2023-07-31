@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-
+<img id="booking-bg" src="https://res.cloudinary.com/devfabrizio/image/upload/v1690795133/Project%20Matinicus/pexels-michelle-riach-995743_hzbgyb.jpg" alt="image of a table with lined up dishes">
+<img id="booking-bg-lg" src="https://res.cloudinary.com/devfabrizio/image/upload/v1690626703/Project%20Matinicus/pexels-ljupco-dzambazovski-1346132_pyeexv.webp" alt="image of a restaurant overlooking the sea">
 <h1 class="text-center" id="booking-form-header">Booking Details</h1>
 <!-- logic to display the success message once the user submits a correct reservation -->
 {% if success_message %}
@@ -11,7 +12,7 @@
 <!-- booking form styled with the bootstrap card element and some custom css -->
 <div class="container text-center mt-5" id="booking-form">
     <div class="row">
-        <div class="card col-lg-3 col-md-4 col-sm-12 mx-auto" id="booking-card">
+        <div class="card col-lg-5 col-md-5 col-sm-12 mx-auto" id="booking-card">
            <form method="post">
             {% csrf_token %}
                 <p>Reservation Name:</p>       
@@ -24,6 +25,7 @@
                 <p id="allergies">{{ form.allergies }}</p>
                 <span>Children under 10:</span>
                 <span id="kids_under_10">{{ form.kids_under_10}}</span>
+                <br>
                 <input type="submit" class="btn btn-success mt-3 mb-1" value="Send Reservation">
            </form>
         </div>

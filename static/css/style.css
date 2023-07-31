@@ -127,6 +127,16 @@ main {
     max-width: 90%; 
 }
 
+#booking-bg {
+    max-width: 100%;
+    position: absolute;
+    margin-top: 2rem;
+}
+
+#booking-bg-lg {
+    display: none;
+}
+
 /* maps.html */
 
 #maps-header {
@@ -242,6 +252,19 @@ main {
         display: block;
         max-width: 100%;
         position: absolute;
+    }
+
+    /* booking.html */
+
+    #booking-bg {
+        display: none;
+    }
+
+    #booking-bg-lg {
+        display: block;
+        max-width: 100%;
+        position: absolute;
+        margin-top: 3rem;
     }
 
     /* login.html */
