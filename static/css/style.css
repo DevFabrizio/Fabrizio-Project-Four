@@ -146,6 +146,15 @@ main {
     position: absolute;
 }
 
+/* logout.html */
+
+#logout-bg { 
+    max-width: 100%;
+    margin-top: -1rem;
+    position: absolute;
+}
+
+
 /* signup.html */
 
 #signup-form {
@@ -221,6 +230,12 @@ main {
 
     #login-bg {
         margin-top: -1rem;
+    }
+
+    /* logout.html */
+
+    #logout-bg {
+        margin-top: -3rem;
     }
 
     /* signup.html */
