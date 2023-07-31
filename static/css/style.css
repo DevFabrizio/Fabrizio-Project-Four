@@ -95,6 +95,15 @@ main {
     margin-top: 60px;
 }
 
+#user-booking-bg {
+    max-width: 100%;
+    position: absolute;
+}
+
+#user-booking-lg-bg {
+    display: none;
+}
+
 /* booking.html */
 
 #booking-form {
@@ -138,6 +147,12 @@ main {
     padding: 1rem;
 }
 
+#logout-bg { 
+    max-width: 100%;
+    margin-top: -1rem;
+    position: absolute;
+}
+
 /* login.html */
 
 #login-bg {
@@ -145,15 +160,6 @@ main {
     margin-top: 4rem;
     position: absolute;
 }
-
-/* logout.html */
-
-#logout-bg { 
-    max-width: 100%;
-    margin-top: -1rem;
-    position: absolute;
-}
-
 
 /* signup.html */
 
@@ -224,6 +230,18 @@ main {
     #chef-header {
         top: 39vw;
         font-size: 3vw;
+    }
+
+    /* user_booking.html */
+
+    #user-booking-bg {
+        display: none;
+    }
+
+    #user-booking-lg-bg {
+        display: block;
+        max-width: 100%;
+        position: absolute;
     }
 
     /* login.html */
