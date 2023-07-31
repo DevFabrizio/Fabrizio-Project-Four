@@ -32,6 +32,10 @@ main {
     width: 100%;
 }
 
+#main-header {
+   display: none;
+}
+
 #hero-header {
     position: absolute;
     top: 5rem;
@@ -300,6 +304,15 @@ main {
 
     .menu-container {
         flex-direction: row;
+    }
+
+    #main-header {
+        display: block;
+        font-family: 'Cinzel', sans-serif;
+        font-size: 10vw;
+        position: absolute;
+        top: 30rem;
+        color: white;
     }
     
     /* login.html */
