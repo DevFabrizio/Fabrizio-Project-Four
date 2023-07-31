@@ -64,6 +64,10 @@ main {
     background-image: radial-gradient(rgba(255, 255, 255, 0.8), transparent);
 }
 
+#menu-title {
+    display: none;
+}
+
 .menu-container {
     display: flex;
     flex-direction: column;
@@ -314,6 +318,15 @@ main {
         top: 30rem;
         color: white;
     }
+
+    #menu-title {
+        display: block;
+        position: absolute;
+        top: 69%;
+        font-family: 'Cinzel', serif;
+        font-size: 6vw;
+    }
+    
     
     /* login.html */
 
