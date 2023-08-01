@@ -42,20 +42,20 @@ The following table contains the results for the lighthouse reports for all html
 
 | Lighthouse Report               | Performance | Accessibility | Best Practices | SEO |   |   |   |
 |---------------------------------|-------------|---------------|----------------|-----|---|---|---|
-| Main Page (mobile)              | 34          | 100           | 83             | 92  |   |   |   |
-| Main Page (desktop)             | 69          | 100           | 83             | 90  |   |   |   |
+| Main Page (mobile)              | 69          | 100           | 83             | 92  |   |   |   |
+| Main Page (desktop)             | 75          | 100           | 83             | 90  |   |   |   |
 | Reservations Page (mobile)      | 71          | 98            | 92             | 91  |   |   |   |
 | Reservations Page (desktop)     | 86          | 98            | 92             | 89  |   |   |   |
-| User Bookings Page (mobile)     | 71          | 90            | 92             | 91  |   |   |   |
-| User Bookings Page (desktop)    | 98          | 90            | 92             | 89  |   |   |   |
-| Logout Page (mobile)            | 77          | 100           | 92             | 91  |   |   |   |
-| Logout Page (desktop)           | 97          | 100           | 92             | 89  |   |   |   |
-| Login Page (mobile)             | 64          | 100           | 92             | 91  |   |   |   |
-| Login Page (desktop)            | 95          | 100           | 92             | 89  |   |   |   |
-| Signup Page (mobile)            | 72          | 100           | 92             | 91  |   |   |   |
-| Signup Page (desktop)           | 97          | 100           | 92             | 89  |   |   |   |
-| Booking Page (mobile)           | 74          | 90            | 92             | 91  |   |   |   |
-| Booking Page (desktop)          | 98          | 90            | 92             | 89  |   |   |   |
+| User Bookings Page (mobile)     | 69          | 91            | 83             | 92  |   |   |   |
+| User Bookings Page (desktop)    | 91          | 91            | 83             | 90  |   |   |   |
+| Logout Page (mobile)            | 63          | 100           | 83             | 92  |   |   |   |
+| Logout Page (desktop)           | 97          | 100           | 83             | 90  |   |   |   |
+| Login Page (mobile)             | 43          | 100           | 83             | 92  |   |   |   |
+| Login Page (desktop)            | 98          | 100           | 83             | 90  |   |   |   |
+| Signup Page (mobile)            | 64          | 100           | 83             | 92  |   |   |   |
+| Signup Page (desktop)           | 84          | 100           | 83             | 90  |   |   |   |
+| Booking Page (mobile)           | 69          | 91            | 83             | 92  |   |   |   |
+| Booking Page (desktop)          | 95          | 91            | 83             | 90  |   |   |   |
 | Maps Page (mobile)              | 61          | 97            | 83             | 91  |   |   |   |
 | Maps Page (desktop)             | 91          | 97            | 83             | 89  |   |   |   |
 | Confirm Delete Page (mobile)    | 71          | 100           | 92             | 91  |   |   |   |
