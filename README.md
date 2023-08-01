@@ -157,3 +157,40 @@ This section is dedicated to the steps I followed in order to successfully deplo
 ## Testing
 
 [Click this link to access the testing file](/TESTING.md)
+
+## Development
+
+### Agile Method
+
+The planning for the project has been done implementing Agile practices. In particular I have helped myself by creating some uer stories that I felt like the owner of the restaurant would have requested. In the context of the Agile methodologies some of the key processes weren't possible to implement due to the fact the the Agile team was comprised of only one individual and that the end user were not available since this is an academic project. However I was able to utilize a good variety of the concepts covered in the Agile practices module of the course. In particular I:
+
+- Organized User Stories that would match the expectations of a potential end user.
+- Gave User Stories priority utilizing custom labels. (Must have, Should have, Could have)
+- Practiced assigning User Stories
+- Developed Acceptance Criteria for all the issues raised
+- Created specific tasks for the various issues in order to organize the amount of work needed for the User Story
+- Automated the linking of the User Stories to the "To Do" section of the project table.
+
+The iterations or Sprints for this project were mainly matched with the mentor sessions. This decision was taken since there was no end user or business people involved beside me. The mentor session in this case allowed me to make the User Stories adhered to the requirements for the project, making the whole development smoother and easier to manage. 
+
+#### Epics
+
+The structure of the Epics for the project is fairly straightforward. My main concern was to take care of the crud functionalities first and then all the rest so the order of the epics for this project was as follows:
+
+- Create a basic styled and functioning static website
+    - Create all the templates
+    - Style the templates beginning with the mobile size first
+    - Connect all the urls through the views
+
+- Create a login system
+    - Use  the django allauth library to create the login, logout and signup functionalities
+    - Download the templates created by the allauth library
+    - Style the templates
+
+- Create the basic CRUD functionalities
+    - Implement CRUD functions for casual visitors
+    - Implement CRUD functions for logged in users
+
+- Create admin CRUD functionalities
+    - Replicate the CRUD functions for the admin
+    
