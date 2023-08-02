@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1 class="text-center mt-5">These are your reservations</h1>
+<h1 class="text-center" id="user-res-header">These are your reservations</h1>
 <div class="container">
    <div class="row">
       {% if user.is_superuser %}

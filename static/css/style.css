@@ -145,6 +145,12 @@ main {
     display: none;
 }
 
+/* user_reservations */
+
+#user-res-header {
+    margin-top: 4rem;
+}
+
 /* maps.html */
 
 #maps-header {
