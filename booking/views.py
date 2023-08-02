@@ -69,8 +69,13 @@ class ConfirmDelete(LoginRequiredMixin, View):
         if request.method == 'POST':
             reservation = Booking.objects.get(
                 id=reservation_id)
+            delete_message = "The reservation you selected has been deleted"
             reservation.delete()
-        return redirect('user_reservations')
+
+        context = {
+            'delete_message': delete_message
+        }
+        return render(request, 'confirm_delete.html', context)
 
 
 class EditReservation(LoginRequiredMixin, View):
