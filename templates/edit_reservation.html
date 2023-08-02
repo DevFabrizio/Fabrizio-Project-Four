@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
+{% if edit_message %}
+<div class="row mt-5 ms-auto me-auto text-center success-msg-container">
+    <div id="reservation-success-msg" class="alert alert-info">{{ edit_message }}</div>
+</div>
+{% endif %}
 <!-- form that sends the edited reservation to the database -->
     <h3 class="mx-auto text-center" id="edit-header">Edit your reservation here</h3>
         <form class="card p-2 mx-auto text-center" id="edit-form" method="post">

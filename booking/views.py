@@ -121,8 +121,12 @@ class EditReservation(LoginRequiredMixin, View):
         form = BookingForm(request.POST, instance=reservation)
 
         if form.is_valid():
+            edit_message = 'The reservation has been edited successfully'
             form.save()
-            return redirect('user_reservations')
+            context = {
+                'edit_message': edit_message
+            }
+            return render(request, 'edit_reservation.html', context)
         else:
             context = {
                 'form': form,
