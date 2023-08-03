@@ -61,28 +61,30 @@ The following is a brief list of the actions a potential user might want to make
 
 This is a brief description of the features included in the website:
 
-- ![Pic]()
+- ![The large screen size nav bar](https://res.cloudinary.com/devfabrizio/image/upload/v1691044310/Project%20Matinicus/large-nav-bar_hzllih.png)
+- ![The small screen size nav bar with the sandwich toggle for the menu](https://res.cloudinary.com/devfabrizio/image/upload/v1691044362/Project%20Matinicus/small-nav-bar_r3abqz.png)
     - This nav bar has been created using a Bootstrap element. It displays the navigation links on the left, which tranforms and regroup into a sandwich style navigation once the size of the device screen becomes small enough to allow the style to kick in. The header text on the left also serves as a link to redirect to the main page once clicked. In addition to that if a user registers on the website the name which they used will be shown on the navbar too. This allows the user to identify the logged in status. 
 
-- ![Pic]()
+- ![The first section of the main page](https://res.cloudinary.com/devfabrizio/image/upload/v1691044345/Project%20Matinicus/menu-first-section_pffmty.png)
     - The first hero image and subsequent section content is all about a general presentation of the restaurant. This brief chunk of text is dedicated to explaining in a short but engaging manner the core values of the restaurant. The image and text chosen was designed to not bore the user and to increase the likelyhood of further investigation on the web page. 
 
-- ![Pic]()
+- ![The second section of the main page](https://res.cloudinary.com/devfabrizio/image/upload/v1691044343/Project%20Matinicus/menu-second-section_llax4u.png)
+- ![The examples from the menu](https://res.cloudinary.com/devfabrizio/image/upload/v1691044343/Project%20Matinicus/menu-recipes_jr4xsw.png)
     - The second section on the main page is for a classic example of the menu. Now, when it comes to the menu of high end restaurant it us usually a good idea to display a few recipe but never the entire menu or the prices. As previoulsy discussed, the clientele of this type of restaurant already knows that the cost is going to be above average. The examples of the menu are there to testify how the kitchen ideally process the thought of a new dish and how it comes to fruition for the customer.
 
-- ![Pic]()
+- ![The last section from the main page](https://res.cloudinary.com/devfabrizio/image/upload/v1691044343/Project%20Matinicus/menu-third-section_bpwqtp.png)
     - The last section of the main page is dedicated to some background information about the lead chef. The chef is obviously the main professional figure in every restaurant, but even more so in high end ones. In this case I wanted to reiterate the concept of rediscovery of the island and its native supply of excellent material for new and exciting recipes. An accompanying picture creates a sense of "fame" around the chef as a person and will surely intrigue the customer who will look for him once seated.
 
-- ![Pic]()
+- ![The maps page](https://res.cloudinary.com/devfabrizio/image/upload/v1691044312/Project%20Matinicus/maps-page_quduic.png)
     - The GPS icon located in the footer leads to this maps page. This page was designed as a little add-on in order to spark curiosity for the user. The page features a main section with an iframe element that contains an embedded Google map taken directly from the Google Maps website. The main goal for this page is to display a map where the user is able to pinpoint the location of the Matinicus island. This is to highlight not only the position of the restaurant but to remind any potential customer of how the location can play a huge part in what the offer and the peculiar type of recipes may be served in the restaurant. 
 
-- ![Pic]()
+- ![The booking page](https://res.cloudinary.com/devfabrizio/image/upload/v1691044310/Project%20Matinicus/booking-page_f6pwzq.png)
     - This shown in the image is the detail of the Booking page for the anonymous users of the page. Style and format are designed to maintain simplicity and let the user make the reservations without distractions like messages of discounts or particular offers. I felt it was uneccessary to add other elements of style since the goal of this section is simply to take and check the validity of the reservation. This page also works as a blueprint for the users' reservations page as well. Basically both pages achieve the same result but for different type of users os the website. 
 
-- ![Pic]()
+- ![The signup form](https://res.cloudinary.com/devfabrizio/image/upload/v1691044362/Project%20Matinicus/signup-page_j6rcla.png)
     - Shown above is the form to sign up to the website. Style, fonts and colors match those of the other pages of the project. Maintaining these features allow the user to gain a sense of familiarity which could also potentially lead to marginal gains on customer retention. Similar to this page the Log-in and Log-out pages are also styled accordingly. These features are at the base for future features implemented as described in the corresponding section. 
     
-- ![Pic]()
+- ![The user reservations page](https://res.cloudinary.com/devfabrizio/image/upload/v1691044363/Project%20Matinicus/user-reservations-page_djchng.png)
     - This is the user reservation page. As one of the most meaningful features on the website I decided to place direct access to it on the nav-bar. This page accomplishes a very important role which is basically 75% of the CRUD functionalities. Particularly this page shows all the reservations made by a logged in user. Every reservation is displayed as a card and has two buttons on the bottom to access the EDIT and DELETE functions. Once redirected to any of those links the user will prompt the changes and submit them. It's important to note some details about this feature. This page is only available to user who have registered an account on the website. In addition to this the admin has access to all the reservations made. This allows the admin to manage the entirety of the reservations made. 
 
 
