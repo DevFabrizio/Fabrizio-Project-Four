@@ -200,10 +200,10 @@ The structure of the Epics for the project is fairly straightforward. My main co
 
 The following images are from the initial concept of the website. During the development process some changes have been made to better fit the Agile Sprints and coincide with the process outlined by the mentor. 
 
-![This is the basic flowchart for the main logics of the project]()
+![This is the basic flowchart for the main logics of the project](https://res.cloudinary.com/devfabrizio/image/upload/v1691064080/Project%20Matinicus/PP4_Logic_Flowchart_jctdnc.png)
 
-![This is the wireframe for the login page]()
+![This is the wireframe for the login page](https://res.cloudinary.com/devfabrizio/image/upload/v1691064399/Project%20Matinicus/signup-login.html_hi44b7.webp)
 
-![This is the wireframe for the main page]()
+![This is the wireframe for the main page](https://res.cloudinary.com/devfabrizio/image/upload/v1691064401/Project%20Matinicus/index.html_sxgni1.webp)
 
-![This is the wireframe for the booking page]()
+![This is the wireframe for the booking page](https://res.cloudinary.com/devfabrizio/image/upload/v1691064398/Project%20Matinicus/booking.html_nipdiw.webp)
