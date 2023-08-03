@@ -196,3 +196,14 @@ The structure of the Epics for the project is fairly straightforward. My main co
 - Create admin CRUD functionalities
     - Replicate the CRUD functions for the admin
     
+### Flowchart, Diagrams and Wireframes
+
+The following images are from the initial concept of the website. During the development process some changes have been made to better fit the Agile Sprints and coincide with the process outlined by the mentor. 
+
+![This is the basic flowchart for the main logics of the project]()
+
+![This is the wireframe for the login page]()
+
+![This is the wireframe for the main page]()
+
+![This is the wireframe for the booking page]()
