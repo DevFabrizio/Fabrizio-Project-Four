@@ -202,8 +202,16 @@ The following images are from the initial concept of the website. During the dev
 
 ![This is the basic flowchart for the main logics of the project](https://res.cloudinary.com/devfabrizio/image/upload/v1691064080/Project%20Matinicus/PP4_Logic_Flowchart_jctdnc.png)
 
+As it's clearly visible from the flowchart above the initial website flowchart has less functionalities and in general is less descriptive of the overall results I was able to obtain in the end. Part of that is easily explained by the simple fact that as I found myself researching problem solving paradigms I consequentially inscreased my knowledge of the technologies used. I obviously proceeded to implement these new solutions and this is what cause the deviation (or addition), from the original project. The main features stayed the same, given the fact that they were required by the project goals for PP4. The other features and functionalities that were added along the process are a result of the natural research process which takes place with the development of a new project.
+
 ![This is the wireframe for the login page](https://res.cloudinary.com/devfabrizio/image/upload/v1691064399/Project%20Matinicus/signup-login.html_hi44b7.webp)
+
+This is the wireframe for the login and signup page. From the wireframe it's noticeable what the main difference is. As I could have easily created a template with two form for login or signup operations I discovered that on most websites with these functionalities the two are always shown in different pages.  
 
 ![This is the wireframe for the main page](https://res.cloudinary.com/devfabrizio/image/upload/v1691064401/Project%20Matinicus/index.html_sxgni1.webp)
 
+In the wireframe for the main page I deviated from the original plan mostly because, once the styling was completed I deemed the wireframe not fitting for some of the layouts I wanted to apply. In particular some of the wireframe section display a side-by-side content that could may very well be optimal for larger screen sizes by not suited for mobiles. 
+
 ![This is the wireframe for the booking page](https://res.cloudinary.com/devfabrizio/image/upload/v1691064398/Project%20Matinicus/booking.html_nipdiw.webp)
+
+In the wireframe for the booking page (both user bookings and normal ones) the first thing I changed was the implementation of a dropdown menu for the allergies. On a business strict sense this would have been a poor choice as the number of allergies and food intollerances are way too high to be represented in a dropdown menu and made accessible to the final user. In the form I decided to apply a simple field where the user could just input a string of text with the allergy or food intollerance presented. This allows the diner to specify particular needs better than to scroll through an almost infinite number of food related issues.
