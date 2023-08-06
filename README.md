@@ -101,6 +101,10 @@ Below is a complete list of all the technologies used for this project.
 
 tech used:
 
+- HTML5 / CSS
+- Bootstrap
+- Python
+- JavaScript
 - cloudinary
 - django allauth library
 - django
@@ -109,11 +113,10 @@ tech used:
 - figma
 - lucid chart
 - postgresql
-- django-datetime-picker
-- Google Maps with the link from the share link in google maps
+- Google Maps with the link from the share link functionality in Google Maps
 - Google fonts
 - [Markdown tables generator](https://www.tablesgenerator.com/markdown_tables)
-
+- [Images were taken from Pexels](https://www.pexels.com/it-it/)
 
 ### Bugs
 
